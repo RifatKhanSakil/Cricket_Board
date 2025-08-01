@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.HR_Manager.EmployeeInformationController">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="894.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Add new employee Information">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #5F8575;">
+                            <children>
+                                <Label layoutX="14.0" layoutY="54.0" text="Name         :" />
+                                <Label layoutX="14.0" layoutY="102.0" text="Address      : " />
+                                <Label layoutX="14.0" layoutY="151.0" text="Contact no :" />
+                                <Label layoutX="195.0" layoutY="207.0" text="Employment Contract">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="349.0" layoutY="251.0" text="Employee Code    :" />
+                                <Label layoutX="57.0" layoutY="311.0" text="Date of Joining   :" />
+                                <Label layoutX="57.0" layoutY="254.0" text="Department      :" />
+                                <Label layoutX="304.0" layoutY="102.0" text="Date Of Birth  :  " />
+                                <TextField fx:id="nameTextField" layoutX="100.0" layoutY="49.0" />
+                                <TextField fx:id="addressTextField" layoutX="100.0" layoutY="97.0" />
+                                <TextField fx:id="contactTextField" layoutX="100.0" layoutY="146.0" />
+                                <TextField fx:id="employeeCodeTextField" layoutX="485.0" layoutY="246.0" prefHeight="31.0" prefWidth="98.0" />
+                                <DatePicker fx:id="dateOfBirth" layoutX="411.0" layoutY="97.0" prefHeight="31.0" prefWidth="147.0" />
+                                <DatePicker fx:id="dateOfJoining" layoutX="179.0" layoutY="306.0" prefHeight="31.0" prefWidth="147.0" />
+                                <Label layoutX="191.0" layoutY="4.0" prefHeight="27.0" prefWidth="193.0" text="Personal Information ">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <ComboBox fx:id="departmentCombobox" layoutX="177.0" layoutY="249.0" prefWidth="150.0" />
+                                <Label layoutX="303.0" layoutY="54.0" text="Gender           :" />
+                                <RadioButton fx:id="maleRadioButton" layoutX="411.0" layoutY="54.0" mnemonicParsing="false" text="Male" />
+                                <RadioButton fx:id="femaleRadioButton" layoutX="485.0" layoutY="54.0" mnemonicParsing="false" text="Female" />
+                                <Button layoutX="371.0" layoutY="288.0" mnemonicParsing="false" onAction="#addEmployeeButtonOnClicked" prefHeight="63.0" prefWidth="178.0" text="Add to Employee List" />
+                                <TextField fx:id="emailTextField" layoutX="411.0" layoutY="146.0" />
+                                <Label layoutX="332.0" layoutY="151.0" text="Email       :" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Check existent Employee information ">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #5F8575;">
+                            <children>
+                                <Label layoutX="249.0" layoutY="29.0" prefHeight="33.0" prefWidth="413.0" text="This table will show every employee details &amp; Information">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Button layoutX="774.0" layoutY="268.0" mnemonicParsing="false" onAction="#showInformationButtonOnClicked" prefHeight="76.0" prefWidth="108.0" text="Show Information" textAlignment="CENTER" wrapText="true" />
+                                <Button layoutX="39.0" layoutY="290.0" mnemonicParsing="false" onAction="#downloadPdfButtonOnClicked" text="Dowload PDF" />
+                                <TableView fx:id="empInfoTableView" layoutX="6.0" layoutY="62.0" prefHeight="200.0" prefWidth="879.0">
+                                    <columns>
+                                        <TableColumn fx:id="codeTableColoum" prefWidth="70.0" text="Code" />
+                                        <TableColumn fx:id="nameTableColoum" prefWidth="103.0" text="Name" />
+                                        <TableColumn fx:id="departmentTableColoum" prefWidth="93.0" text="Department" />
+                                        <TableColumn fx:id="contactTableColoum" prefWidth="105.0" text="Contact" />
+                                        <TableColumn fx:id="dateofBirthTableColoum" prefWidth="99.0" text="Date of Birth" />
+                                        <TableColumn fx:id="dateofJoiningTableColoum" minWidth="0.0" prefWidth="118.0" text="Date of Joining" />
+                                        <TableColumn fx:id="addressTableColumn" prefWidth="132.0" text="Address" />
+                                        <TableColumn fx:id="emailTableColumn" prefWidth="158.0" text="Email" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

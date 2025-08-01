@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="807.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller=".HR_Manager.Attendance_PerformanceController">
+    <children>
+        <Label layoutX="28.0" layoutY="64.0" text="Employee name   :" />
+        <Label layoutX="28.0" layoutY="107.0" text="Department" />
+        <Label layoutX="28.0" layoutY="148.0" text="Employee code     :" />
+        <Label layoutX="28.0" layoutY="189.0" text="Date of Entry        :" />
+        <TextField fx:id="nametextField" layoutX="162.0" layoutY="59.0" promptText="          Enter Name" />
+        <TextField fx:id="codeTextField" layoutX="162.0" layoutY="143.0" prefHeight="31.0" prefWidth="74.0" promptText="  1234" />
+        <ComboBox fx:id="departmentCombobox" layoutX="162.0" layoutY="102.0" prefWidth="150.0" promptText="Select One" />
+        <ComboBox fx:id="checkInCombobox" layoutX="422.0" layoutY="101.0" prefHeight="31.0" prefWidth="158.0" promptText="check in time  " />
+        <ComboBox fx:id="checkOutCombobox" layoutX="634.0" layoutY="101.0" prefHeight="31.0" prefWidth="158.0" promptText="check out time" />
+        <DatePicker fx:id="dateOfEntry" layoutX="161.0" layoutY="184.0" prefHeight="31.0" prefWidth="187.0" />
+        <Line endX="819.0" endY="378.0" startX="29.0" startY="378.0" />
+        <Button layoutX="548.0" layoutY="172.0" mnemonicParsing="false" onAction="#addShowButtonOnClicked" prefHeight="42.0" prefWidth="125.0" text="Add &amp; Show" />
+        <Label layoutX="28.0" layoutY="548.0" text="Performance score (out of 10)  :" />
+        <Label layoutX="30.0" layoutY="447.0" text="Employee name   :" />
+        <TextField fx:id="performanceNameTextField" layoutX="162.0" layoutY="442.0" promptText="          Enter Name" />
+        <Label layoutX="29.0" layoutY="500.0" text="Employee code     :" />
+        <TextField fx:id="performanceCodeTextField" layoutX="162.0" layoutY="495.0" prefHeight="31.0" prefWidth="74.0" promptText="  1234" />
+        <ComboBox fx:id="PerformanceScoreCombobox" layoutX="247.0" layoutY="543.0" prefHeight="31.0" prefWidth="89.0" promptText="1-10" />
+        <Button layoutX="517.0" layoutY="432.0" mnemonicParsing="false" onAction="#showPerformanceScoreButtonOnClicked" prefHeight="31.0" prefWidth="158.0" text="Show performance score" />
+        <Line endX="-54.0" endY="151.0" layoutX="542.0" layoutY="442.0" startX="-54.0" startY="1.0" />
+        <Label layoutX="368.0" layoutY="388.0" text="Performance Score">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="14.0" text="Time/Attendance">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="PerformanceDepartmentCombobox" layoutX="299.0" layoutY="495.0" prefHeight="31.0" prefWidth="138.0" promptText="Department" />
+        <Button layoutX="351.0" layoutY="543.0" mnemonicParsing="false" onAction="#addPerformanceScoreButtonOnClicked" prefHeight="31.0" prefWidth="82.0" text="Add" />
+        <Button layoutX="738.0" layoutY="178.0" mnemonicParsing="false" onAction="#sendButtonOnClicked" prefHeight="31.0" prefWidth="74.0" text="Send" />
+        <ComboBox fx:id="monthComboBox" layoutX="362.0" layoutY="442.0" prefHeight="31.0" prefWidth="104.0" promptText="Month" />
+        <Button layoutX="701.0" layoutY="432.0" mnemonicParsing="false" onAction="#pieChartButtonOnClicked" text="Load Pie Chart" />
+        <TableView fx:id="tableViewOfAttendance" layoutX="2.0" layoutY="225.0" prefHeight="134.0" prefWidth="833.0">
+            <columns>
+                <TableColumn fx:id="employeeNameColumn" prefWidth="135.0" text="Employee name  " />
+                <TableColumn fx:id="departmentColumn" prefWidth="98.0" text="Department" />
+                <TableColumn fx:id="employeeCodeColumn" prefWidth="124.0" text="Employee code " />
+                <TableColumn fx:id="checkInTimeColumn" prefWidth="122.0" text="check in time  " />
+                <TableColumn fx:id="CheckOutTimeColumn" prefWidth="133.0" text="check out time  " />
+                <TableColumn fx:id="workHoursColumn" prefWidth="100.0" text="WorkHours" />
+                <TableColumn fx:id="doeColumn" prefWidth="120.0" text="D.O.E" />
+            </columns>
+        </TableView>
+        <TableView fx:id="performanceTableView" layoutX="12.0" layoutY="594.0" prefHeight="200.0" prefWidth="810.0">
+            <columns>
+                <TableColumn fx:id="peformanceEmployeeColumn" prefWidth="189.0" text="Employee name" />
+                <TableColumn fx:id="performanceDeptColumn" prefWidth="140.0" text="Dept" />
+                <TableColumn fx:id="performanceMonthColumn" prefWidth="195.0" text="Month" />
+                <TableColumn fx:id="performanceCodeColumn" prefWidth="151.0" text="Code" />
+                <TableColumn fx:id="performanceScoreColumn" prefWidth="134.0" text="Score" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
