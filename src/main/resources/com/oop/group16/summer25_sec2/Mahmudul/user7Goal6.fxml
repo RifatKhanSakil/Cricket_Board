@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="794.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user7goal1">
+    <children>
+        <Label layoutX="28.0" layoutY="64.0" text="Player Name:" />
+        <Label layoutX="28.0" layoutY="107.0" text="Officer" />
+        <Label layoutX="28.0" layoutY="148.0" text="Vehicle ID:" />
+        <Label layoutX="28.0" layoutY="189.0" text="Schedule Date:" />
+        <TextField fx:id="playerNameTextField" layoutX="162.0" layoutY="59.0" promptText="Enter Player Name" />
+        <TextField fx:id="vehicleIdTextField" layoutX="162.0" layoutY="143.0" prefHeight="31.0" prefWidth="74.0" promptText="Vehicle ID" />
+        <ComboBox fx:id="officerComboBox" layoutX="162.0" layoutY="102.0" prefWidth="150.0" promptText="Select Officer" />
+        <ComboBox fx:id="pickupTimeComboBox" layoutX="422.0" layoutY="101.0" prefHeight="31.0" prefWidth="158.0" promptText="Pickup Time" />
+        <ComboBox fx:id="dropoffTimeComboBox" layoutX="634.0" layoutY="101.0" prefHeight="31.0" prefWidth="158.0" promptText="Dropoff Time" />
+        <DatePicker fx:id="scheduleDatePicker" layoutX="161.0" layoutY="184.0" prefHeight="31.0" prefWidth="187.0" />
+        <Line endX="819.0" endY="378.0" startX="29.0" startY="378.0" />
+        <Button layoutX="548.0" layoutY="172.0" mnemonicParsing="false" onAction="#assignOfficerButtonClicked" prefHeight="42.0" prefWidth="125.0" text="Assign Officer" />
+        <Label layoutX="28.0" layoutY="548.0" text="Vehicle Type:" />
+        <Label layoutX="30.0" layoutY="447.0" text="Search Player:" />
+        <TextField fx:id="searchPlayerTextField" layoutX="162.0" layoutY="442.0" promptText="Enter Player Name" />
+        <Label layoutX="29.0" layoutY="500.0" text="Search Officer:" />
+        <TextField fx:id="searchOfficerTextField" layoutX="162.0" layoutY="495.0" prefHeight="31.0" prefWidth="74.0" promptText="Officer ID" />
+        <ComboBox fx:id="vehicleTypeComboBox" layoutX="247.0" layoutY="543.0" prefHeight="31.0" prefWidth="89.0" promptText="Select Type" />
+        <Button layoutX="517.0" layoutY="432.0" mnemonicParsing="false" onAction="#searchAssignmentsButtonClicked" prefHeight="31.0" prefWidth="158.0" text="Search Assignments" />
+        <Line endX="-54.0" endY="151.0" layoutX="542.0" layoutY="442.0" startX="-54.0" startY="1.0" />
+        <Label layoutX="368.0" layoutY="388.0" text="Current Assignments">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="14.0" text="Player Escorts">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="scheduleTypeComboBox" layoutX="299.0" layoutY="495.0" prefHeight="31.0" prefWidth="138.0" promptText="Schedule Type" />
+        <Button layoutX="351.0" layoutY="543.0" mnemonicParsing="false" onAction="#saveToFileButtonClicked" prefHeight="31.0" prefWidth="82.0" text="Save" />
+        <Button layoutX="738.0" layoutY="178.0" mnemonicParsing="false" onAction="#clearFormButtonClicked" prefHeight="31.0" prefWidth="74.0" text="Clear" />
+        <ComboBox fx:id="monthComboBox" layoutX="362.0" layoutY="442.0" prefHeight="31.0" prefWidth="104.0" promptText="Month" />
+        <Button layoutX="701.0" layoutY="432.0" mnemonicParsing="false" onAction="#viewScheduleButtonClicked" text="View Schedule" />
+        <TableView fx:id="assignmentsTableView" layoutX="15.0" layoutY="234.0" prefHeight="134.0" prefWidth="791.0">
+            <columns>
+                <TableColumn fx:id="playerNameColumn" prefWidth="135.0" text="Player Name" />
+                <TableColumn fx:id="officerNameColumn" prefWidth="98.0" text="Officer" />
+                <TableColumn fx:id="vehicleIdColumn" prefWidth="124.0" text="Vehicle ID" />
+                <TableColumn fx:id="pickupTimeColumn" prefWidth="122.0" text="Pickup Time" />
+                <TableColumn fx:id="dropoffTimeColumn" prefWidth="133.0" text="Dropoff Time" />
+                <TableColumn fx:id="scheduleDateColumn" prefWidth="56.66668701171875" text="Date" />
+                <TableColumn fx:id="vehicleTypeColumn" prefWidth="163.33331298828125" text="Vehicle Type" />
+            </columns>
+        </TableView>
+        <TableView fx:id="scheduleTableView" layoutX="12.0" layoutY="594.0" prefHeight="200.0" prefWidth="810.0">
+            <columns>
+                <TableColumn fx:id="schedulePlayerColumn" prefWidth="189.0" text="Player" />
+                <TableColumn fx:id="scheduleOfficerColumn" prefWidth="140.0" text="Officer" />
+                <TableColumn fx:id="scheduleMonthColumn" prefWidth="195.0" text="Month" />
+                <TableColumn fx:id="scheduleTypeColumn" prefWidth="151.0" text="Type" />
+                <TableColumn fx:id="scheduleStatusColumn" prefWidth="134.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
