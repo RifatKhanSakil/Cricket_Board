@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user7goal1">
+    <children>
+        <Label layoutX="28.0" layoutY="64.0" text="Meeting Title:" />
+        <Label layoutX="28.0" layoutY="107.0" text="Meeting Type" />
+        <Label layoutX="28.0" layoutY="148.0" text="Date:" />
+        <Label layoutX="28.0" layoutY="189.0" text="Time:" />
+        <TextField fx:id="titleTextField" layoutX="162.0" layoutY="59.0" promptText="Enter meeting title" />
+        <ComboBox fx:id="meetingTypeComboBox" layoutX="162.0" layoutY="102.0" prefWidth="150.0" promptText="Select meeting type" />
+        <DatePicker fx:id="meetingDatePicker" layoutX="161.0" layoutY="143.0" prefHeight="31.0" prefWidth="187.0" />
+        <ComboBox fx:id="timeComboBox" layoutX="161.0" layoutY="184.0" prefHeight="31.0" prefWidth="158.0" promptText="Select time" />
+        <Line endX="640.0" endY="384.0" startX="21.33333396911621" startY="384.0" />
+        <Label layoutX="28.0" layoutY="225.0" text="Attendees:" />
+        <TextField fx:id="attendeesTextField" layoutX="162.0" layoutY="220.0" prefWidth="300.0" promptText="Enter attendees (comma separated)" />
+        <Label layoutX="28.0" layoutY="265.0" text="Agenda Items:" />
+        <TextArea fx:id="agendaTextArea" layoutX="162.0" layoutY="265.0" prefHeight="100.0" prefWidth="300.0" promptText="Enter agenda items" />
+        <Button layoutX="482.0" layoutY="282.0" mnemonicParsing="false" onAction="#saveMeetingButtonOnClicked" prefHeight="42.0" prefWidth="125.0" text="Save Meeting" />
+        <Label layoutX="374.0" layoutY="14.0" text="Meeting Management">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <TableView fx:id="meetingsTableView" layoutX="32.0" layoutY="426.0" prefHeight="210.0" prefWidth="632.0">
+            <columns>
+                <TableColumn fx:id="meetingTitleColumn" prefWidth="126.00000500679016" text="Meeting Title" />
+                <TableColumn fx:id="meetingTypeColumn" prefWidth="83.99996948242188" text="Type" />
+                <TableColumn fx:id="meetingDateColumn" prefWidth="60.66664123535156" text="Date" />
+                <TableColumn fx:id="meetingTimeColumn" prefWidth="102.66668701171875" text="Time" />
+                <TableColumn fx:id="attendeesColumn" prefWidth="141.33331298828125" text="Attendees" />
+                <TableColumn fx:id="agendaColumn" prefWidth="114.6666259765625" text="Agenda Items" />
+            </columns>
+        </TableView>
+        <Button layoutX="482.0" layoutY="352.0" mnemonicParsing="false" onAction="#loadMeetingsButtonOnClicked" prefHeight="25.0" prefWidth="116.0" text="Load Meetings" />
+        <Label layoutX="28.0" layoutY="395.0" text="Discussion Points:" />
+        <TextArea fx:id="discussionTextArea" layoutX="417.0" layoutY="66.0" prefHeight="100.0" prefWidth="273.0" promptText="Enter discussion points" />
+      <Label layoutX="358.0" layoutY="75.0" text="Discussion:" />
+    </children>
 </AnchorPane>
