@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="807.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user7goal1">
+    <children>
+        <!-- Input Section -->
+        <Label layoutX="28.0" layoutY="64.0" text="Tournament:" />
+        <ComboBox fx:id="tournamentComboBox" layoutX="162.0" layoutY="59.0" prefWidth="250.0" promptText="Select Tournament" />
+
+        <Label layoutX="28.0" layoutY="107.0" text="Player Search:" />
+        <TextField fx:id="playerSearchField" layoutX="162.0" layoutY="102.0" prefWidth="250.0" promptText="Enter player name" />
+
+        <Label layoutX="28.0" layoutY="150.0" text="Position:" />
+        <ComboBox fx:id="positionComboBox" layoutX="162.0" layoutY="145.0" prefWidth="150.0" promptText="All Positions" />
+
+        <Label layoutX="28.0" layoutY="193.0" text="Age Range:" />
+        <TextField fx:id="minAgeField" layoutX="162.0" layoutY="188.0" prefWidth="60.0" promptText="Min" />
+        <Label layoutX="230.0" layoutY="193.0" text="to" />
+        <TextField fx:id="maxAgeField" layoutX="250.0" layoutY="188.0" prefWidth="60.0" promptText="Max" />
+
+        <!-- Action Buttons -->
+        <Button layoutX="560.0" layoutY="86.0" mnemonicParsing="false" onAction="#loadPlayersButtonOnClicked" prefHeight="31.0" prefWidth="120.0" text="Search Players" />
+        <Button layoutX="560.0" layoutY="29.0" mnemonicParsing="false" onAction="#flagPlayerButtonOnClicked" prefHeight="31.0" prefWidth="120.0" text="Flag Player" />
+        <Button layoutX="560.0" layoutY="142.0" mnemonicParsing="false" onAction="#clearFiltersButtonOnClicked" prefHeight="31.0" prefWidth="120.0" text="Clear Filters" />
+
+        <!-- Comparison Section -->
+        <Label layoutX="19.0" layoutY="495.0" text="Compare Players:" />
+        <ComboBox fx:id="player1ComboBox" layoutX="445.0" layoutY="491.0" prefWidth="150.0" promptText="Select Player 1" />
+        <ComboBox fx:id="player2ComboBox" layoutX="598.0" layoutY="491.0" prefHeight="17.0" prefWidth="150.0" promptText="Select Player 2" />
+        <Button layoutX="312.0" layoutY="732.0" mnemonicParsing="false" onAction="#comparePlayersButtonOnClicked" prefHeight="31.0" prefWidth="80.0" text="Compare" />
+
+        <Label layoutX="145.0" layoutY="14.0" text="Domestic Scouting">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="emergingPlayersTableView" layoutX="2.0" layoutY="225.0" prefHeight="250.0" prefWidth="833.0">
+            <columns>
+                <TableColumn fx:id="playerNameColumn" prefWidth="180.0" text="Player Name" />
+                <TableColumn fx:id="ageColumn" prefWidth="70.0" text="Age" />
+                <TableColumn fx:id="positionColumn" prefWidth="100.0" text="Position" />
+                <TableColumn fx:id="teamColumn" prefWidth="120.0" text="Team" />
+                <TableColumn fx:id="matchesColumn" prefWidth="80.0" text="Matches" />
+                <TableColumn fx:id="goalsColumn" prefWidth="80.0" text="Goals" />
+                <TableColumn fx:id="assistsColumn" prefWidth="80.0" text="Assists" />
+                <TableColumn fx:id="ratingColumn" prefWidth="80.0" text="Rating" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="216.0" layoutY="488.0" text="Player Comparison">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="statsComparisonTableView" layoutX="12.0" layoutY="525.0" prefHeight="200.0" prefWidth="810.0">
+            <columns>
+                <TableColumn fx:id="statNameColumn" prefWidth="200.0" text="Statistic" />
+                <TableColumn fx:id="player1StatsColumn" prefWidth="150.0" text="Player 1" />
+                <TableColumn fx:id="player2StatsColumn" prefWidth="150.0" text="Player 2" />
+                <TableColumn fx:id="differenceColumn" prefWidth="150.0" text="Difference" />
+            </columns>
+        </TableView>
+      <Button layoutX="352.0" layoutY="167.0" mnemonicParsing="false" onAction="#submitSquadButtonOnClicked" prefHeight="42.0" prefWidth="120.0" text="Submit Squad" />
+    </children>
+</AnchorPane>
