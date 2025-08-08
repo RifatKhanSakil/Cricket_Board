@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="807.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user8goal7">
+    <children>
+        <Label layoutX="28.0" layoutY="64.0" text="Player Name:" />
+        <Label layoutX="28.0" layoutY="107.0" text="Current Level:" />
+        <Label layoutX="28.0" layoutY="148.0" text="Player ID:" />
+        <Label layoutX="28.0" layoutY="189.0" text="Date:" />
+        <TextField fx:id="playerNameTextField" layoutX="162.0" layoutY="59.0" promptText="Enter Player Name" />
+        <TextField fx:id="playerIdTextField" layoutX="162.0" layoutY="143.0" prefHeight="31.0" prefWidth="74.0" promptText="ID" />
+        <ComboBox fx:id="currentLevelCombobox" layoutX="162.0" layoutY="102.0" prefWidth="150.0" promptText="Select Level" />
+        <ComboBox fx:id="ageGroupCombobox" layoutX="340.0" layoutY="56.0" prefHeight="31.0" prefWidth="158.0" promptText="Age Group" />
+        <ComboBox fx:id="newLevelCombobox" layoutX="345.0" layoutY="99.0" prefHeight="31.0" prefWidth="158.0" promptText="New Level" />
+        <Button layoutX="340.0" layoutY="137.0" mnemonicParsing="false" onAction="#movePlayerButtonOnClicked" prefHeight="42.0" prefWidth="125.0" text="Move Player" />
+        <Line endX="819.0" endY="378.0" startX="29.0" startY="378.0" />
+        <Label layoutX="368.0" layoutY="14.0" text="Talent Pathway Management">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <Button layoutX="484.0" layoutY="169.0" mnemonicParsing="false" onAction="#saveButtonOnClicked" prefHeight="31.0" prefWidth="74.0" text="Save" />
+        <TableView fx:id="pathwayTableView" layoutX="2.0" layoutY="225.0" prefHeight="134.0" prefWidth="833.0">
+            <columns>
+                <TableColumn fx:id="playerNameColumn" prefWidth="135.0" text="Player Name" />
+                <TableColumn fx:id="ageGroupColumn" prefWidth="98.0" text="Age Group" />
+                <TableColumn fx:id="playerIdColumn" prefWidth="124.0" text="Player ID" />
+                <TableColumn fx:id="currentLevelColumn" prefWidth="122.0" text="Current Level" />
+                <TableColumn fx:id="newLevelColumn" prefWidth="133.0" text="New Level" />
+                <TableColumn fx:id="programColumn" prefWidth="100.0" text="Program" />
+                <TableColumn fx:id="progressColumn" prefWidth="120.0" text="Progress" />
+            </columns>
+        </TableView>
+        <Label layoutX="28.0" layoutY="447.0" text="Development Program:" />
+        <ComboBox fx:id="programCombobox" layoutX="162.0" layoutY="442.0" prefWidth="200.0" promptText="Select Program" />
+        <Label layoutX="28.0" layoutY="500.0" text="Progress Tracking:" />
+        <ComboBox fx:id="progressCombobox" layoutX="162.0" layoutY="495.0" prefWidth="200.0" promptText="Progress Status" />
+        <Button layoutX="422.0" layoutY="442.0" mnemonicParsing="false" onAction="#updateProgramButtonOnClicked" prefHeight="31.0" prefWidth="150.0" text="Update Program" />
+        <Button layoutX="422.0" layoutY="495.0" mnemonicParsing="false" onAction="#trackProgressButtonOnClicked" prefHeight="31.0" prefWidth="150.0" text="Track Progress" />
+        <Line endX="105.33331298828125" endY="133.3333740234375" layoutX="542.0" layoutY="442.0" startX="105.33331298828125" startY="-18.0" />
+        <Label layoutX="368.0" layoutY="388.0" text="Development Programs">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <TableView fx:id="programsTableView" layoutX="26.0" layoutY="593.0" prefHeight="200.0" prefWidth="607.0">
+            <columns>
+                <TableColumn fx:id="programPlayerColumn" prefWidth="138.66669178009033" text="Player Name" />
+                <TableColumn fx:id="programAgeGroupColumn" prefWidth="107.33329772949219" text="Age Group" />
+                <TableColumn fx:id="programNameColumn" prefWidth="99.33331298828125" text="Program" />
+                <TableColumn fx:id="programIdColumn" prefWidth="136.6666259765625" text="Player ID" />
+                <TableColumn fx:id="programProgressColumn" prefWidth="123.33334350585938" text="Progress" />
+            </columns>
+        </TableView>
+      <DatePicker layoutX="64.0" layoutY="185.0" />
+    </children>
+</AnchorPane>
