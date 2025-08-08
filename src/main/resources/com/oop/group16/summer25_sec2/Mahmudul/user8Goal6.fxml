@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="807.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user7goal1">
+<AnchorPane id="AnchorPane" prefHeight="807.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user8goal6">
     <children>
         <Label layoutX="28.0" layoutY="64.0" text="Player Name:" />
         <Label layoutX="28.0" layoutY="107.0" text="Injury Status" />
