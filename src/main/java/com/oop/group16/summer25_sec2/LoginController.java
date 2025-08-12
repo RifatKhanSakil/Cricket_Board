@@ -37,7 +37,7 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    private void onSubmit(ActionEvent event) {
+    public void onSubmit(ActionEvent event) {
         String selected = userComboBox.getSelectionModel().getSelectedItem();
         if (selected == null || selected.isBlank()) {
             showInfo("Select a user to continue.");
@@ -66,9 +66,22 @@ public class LoginController implements Initializable {
         a.showAndWait();
     }
 
+    private void showError(String msg) {
+        Alert a = new Alert(Alert.AlertType.ERROR);
+        a.setTitle("Error");
+        a.setHeaderText(null);
+        a.setContentText(msg);
+        a.showAndWait();
+    }
+
     private void open(ActionEvent event, String resource, String title) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource(resource));
+            URL url = getClass().getResource(resource);
+            if (url == null) {
+                showError("View not found: " + resource);
+                return;
+            }
+            Parent root = FXMLLoader.load(url);
             Stage stage = new Stage();
             stage.setTitle(title);
             stage.setScene(new Scene(root));
@@ -76,7 +89,8 @@ public class LoginController implements Initializable {
             Node node = (Node) event.getSource();
             Stage current = (Stage) node.getScene().getWindow();
             if (current != null) current.close();
-        } catch (Exception ignored) {
+        } catch (Exception ex) {
+            showError("Failed to open: " + title + "\n" + ex.getClass().getSimpleName() + ": " + ex.getMessage());
         }
     }
 }

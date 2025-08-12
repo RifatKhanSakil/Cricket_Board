@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+
+import java.net.URL;
 
 public class MenuSponsorController {
     public void openBrandVisibility(ActionEvent e) {
@@ -44,20 +47,43 @@ public class MenuSponsorController {
         openAndClose(e, "/com/oop/group16/summer25_sec2/Login.fxml", "Login");
     }
 
+    private void showError(String msg) {
+        Alert a = new Alert(Alert.AlertType.ERROR);
+        a.setTitle("Error");
+        a.setHeaderText(null);
+        a.setContentText(msg);
+        a.showAndWait();
+    }
+
     private void open(String resource, String title) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource(resource));
+            URL url = getClass().getResource(resource);
+            if (url == null) {
+                showError("View not found: " + resource);
+                return;
+            }
+            Parent root = FXMLLoader.load(url);
             Stage stage = new Stage();
             stage.setTitle(title);
             stage.setScene(new Scene(root));
             stage.show();
-        } catch (Exception ignored) {
+        } catch (Exception ex) {
+            Throwable cause = ex.getCause();
+            String detail = ex.getClass().getSimpleName() + ": " + (ex.getMessage() == null ? "" : ex.getMessage());
+            if (cause != null)
+                detail += "\nCause: " + cause.getClass().getSimpleName() + ": " + (cause.getMessage() == null ? "" : cause.getMessage());
+            showError("Failed to open: " + title + "\n" + detail);
         }
     }
 
     private void openAndClose(ActionEvent e, String resource, String title) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource(resource));
+            URL url = getClass().getResource(resource);
+            if (url == null) {
+                showError("View not found: " + resource);
+                return;
+            }
+            Parent root = FXMLLoader.load(url);
             Stage stage = new Stage();
             stage.setTitle(title);
             stage.setScene(new Scene(root));
@@ -65,7 +91,12 @@ public class MenuSponsorController {
             Node node = (Node) e.getSource();
             Stage current = (Stage) node.getScene().getWindow();
             if (current != null) current.close();
-        } catch (Exception ignored) {
+        } catch (Exception ex) {
+            Throwable cause = ex.getCause();
+            String detail = ex.getClass().getSimpleName() + ": " + (ex.getMessage() == null ? "" : ex.getMessage());
+            if (cause != null)
+                detail += "\nCause: " + cause.getClass().getSimpleName() + ": " + (cause.getMessage() == null ? "" : cause.getMessage());
+            showError("Failed to open: " + title + "\n" + detail);
         }
     }
 }
