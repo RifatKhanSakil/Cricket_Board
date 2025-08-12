@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.Sponsor.CompanyEventManagementController"
+            prefHeight="620.0" prefWidth="820.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label text="Co-Branded Fan Event Management" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="orgNameField" promptText="Sponsor Organization Name"/>
+                <ComboBox fx:id="eventTypeCombo" promptText="Select Event Type"/>
+                <DatePicker fx:id="eventDatePicker" promptText="Proposed Event Date"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="venueStadiumRadio" text="Stadium"/>
+                        <RadioButton fx:id="venueHotelRadio" text="Hotel/Convention Hall"/>
+                        <RadioButton fx:id="venueOutdoorRadio" text="Outdoor Park"/>
+                    </children>
+                </HBox>
+                <TextField fx:id="budgetField" promptText="Estimated Event Budget"/>
+                <TextArea fx:id="proposalDetailsArea" promptText="Event Proposal Details" prefRowCount="5"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="submitButton" text="Submit Event Proposal" onAction="#onSubmitProposal"/>
+                    </children>
+                </HBox>
+                <Label text="Fan Event Tracker" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="eventTable" prefHeight="240.0">
+                    <columns>
+                        <TableColumn fx:id="eventNameColumn" text="Event Name" prefWidth="220.0"/>
+                        <TableColumn fx:id="proposalDateColumn" text="Proposal Date" prefWidth="160.0"/>
+                        <TableColumn fx:id="statusColumn" text="Status" prefWidth="160.0"/>
+                        <TableColumn fx:id="feedbackColumn" text="Feedback Summary" prefWidth="240.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

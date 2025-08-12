@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.TicketBuyer.MobileTicketAccessController"
+            prefHeight="520.0" prefWidth="800.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label fx:id="titleLabel" text="Mobile Ticket Access"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <ListView fx:id="ticketsListView" prefHeight="200.0"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="downloadButton" text="Download Ticket" onAction="#onDownloadTicket"/>
+                        <Button fx:id="addToWalletButton" text="Add to Mobile Wallet" onAction="#onAddToWallet"/>
+                    </children>
+                </HBox>
+                <HBox spacing="20.0" alignment="CENTER_LEFT">
+                    <children>
+                        <ImageView fx:id="qrImageView" fitWidth="180.0" fitHeight="180.0" preserveRatio="true"/>
+                        <Label fx:id="qrNoteLabel" text="Scan this QR at entry"/>
+                    </children>
+                </HBox>
+                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                    <children>
+                        <Button fx:id="shareButton" text="Share Ticket" onAction="#onShareTicket"/>
+                        <Button fx:id="deleteButton" text="Delete Ticket" onAction="#onDeleteTicket"/>
+                    </children>
+                </HBox>
+                <ToggleButton fx:id="notificationsToggle" text="Match Start Notifications: Off"
+                              onAction="#onToggleNotifications"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backButton" text="Back to Home" onAction="#onBackToHome"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

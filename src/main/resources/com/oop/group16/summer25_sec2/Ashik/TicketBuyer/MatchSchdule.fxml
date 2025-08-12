@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.TicketBuyer.MatchScheduleController"
+            prefHeight="600.0" prefWidth="800.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label fx:id="titleLabel" text="Match Schedule" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TableView fx:id="matchesTable" prefHeight="280.0">
+                    <columns>
+                        <TableColumn fx:id="dateColumn" text="Match Date" prefWidth="160.0"/>
+                        <TableColumn fx:id="teamsColumn" text="Teams" prefWidth="260.0"/>
+                        <TableColumn fx:id="venueColumn" text="Venue" prefWidth="200.0"/>
+                        <TableColumn fx:id="timeColumn" text="Time" prefWidth="120.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="setReminderButton" text="Set Reminder" onAction="#onSetReminder"/>
+                        <Button fx:id="downloadFixtureButton" text="Download Full Fixture"
+                                onAction="#onDownloadFixture"/>
+                        <Button fx:id="backButton" text="Back to Home" onAction="#onBackToHome"/>
+                    </children>
+                </HBox>
+                <Label text="Reminders" style="-fx-font-weight: bold;"/>
+                <ListView fx:id="remindersListView" prefHeight="150.0"/>
+                <Label fx:id="alertsLabel" text="Alerts: No alerts"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

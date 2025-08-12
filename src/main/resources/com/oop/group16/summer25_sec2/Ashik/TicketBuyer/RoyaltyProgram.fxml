@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.TicketBuyer.RoyaltyProgramController"
+            prefHeight="600.0" prefWidth="800.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label fx:id="titleLabel" text="Loyalty &amp; Rewards Program"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <Button fx:id="joinButton" text="Join Rewards Program" onAction="#onJoinProgram"/>
+                <Label text="Rewards Summary" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="summaryTable" prefHeight="120.0">
+                    <columns>
+                        <TableColumn fx:id="pointsEarnedColumn" text="Points Earned" prefWidth="180.0"/>
+                        <TableColumn fx:id="pointsRedeemedColumn" text="Points Redeemed" prefWidth="180.0"/>
+                        <TableColumn fx:id="currentBalanceColumn" text="Current Balance" prefWidth="180.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0">
+                    <children>
+                        <TextField fx:id="couponField" promptText="Enter Coupon Code" HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="redeemButton" text="Redeem" onAction="#onRedeem"/>
+                    </children>
+                </HBox>
+                <Label text="Rewards History" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="historyTable" prefHeight="220.0">
+                    <columns>
+                        <TableColumn fx:id="dateColumn" text="Date" prefWidth="140.0"/>
+                        <TableColumn fx:id="actionColumn" text="Action" prefWidth="160.0"/>
+                        <TableColumn fx:id="pointsColumn" text="Points" prefWidth="120.0"/>
+                        <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="300.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backButton" text="Back to Account" onAction="#onBackToAccount"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.TicketBuyer.FeedBackSubmissionController"
+            prefHeight="620.0" prefWidth="820.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label text="Feedback &amp; Complaint Submission" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="nameField" promptText="Your Name"/>
+                <ComboBox fx:id="matchComboBox" promptText="Select Match/Event"/>
+                <DatePicker fx:id="matchDatePicker" promptText="Match Date"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="excellentRadio" text="Excellent"/>
+                        <RadioButton fx:id="goodRadio" text="Good"/>
+                        <RadioButton fx:id="averageRadio" text="Average"/>
+                        <RadioButton fx:id="poorRadio" text="Poor"/>
+                    </children>
+                </HBox>
+                <TextField fx:id="titleField" promptText="Complaint/Feedback Title"/>
+                <TextArea fx:id="detailsArea" promptText="Detailed Feedback or Complaint" prefRowCount="5"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="submitButton" text="Submit Feedback" onAction="#onSubmitFeedback"/>
+                    </children>
+                </HBox>
+                <Label text="Complaint Status Tracker" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="complaintTable" prefHeight="220.0">
+                    <columns>
+                        <TableColumn fx:id="ticketIdColumn" text="Ticket ID" prefWidth="160.0"/>
+                        <TableColumn fx:id="dateSubmittedColumn" text="Date Submitted" prefWidth="180.0"/>
+                        <TableColumn fx:id="statusColumn" text="Status" prefWidth="160.0"/>
+                        <TableColumn fx:id="responseSummaryColumn" text="Response Summary" prefWidth="260.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backMenuButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                        <Button fx:id="backAccountButton" text="Back to Account" onAction="#onBackToAccount"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.Sponsor.PositiveBrandImageController"
+            prefHeight="600.0" prefWidth="820.0">
+    <fx:define>
+        <ToggleGroup fx:id="statusGroup"/>
+    </fx:define>
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label text="Brand Image Management" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="sponsorNameField" promptText="Sponsor Name"/>
+                <ComboBox fx:id="mediaChannelCombo" promptText="Select Media Channel"/>
+                <DatePicker fx:id="assessmentDatePicker" promptText="Assessment Date"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="riskAssessedRadio" text="Risk Assessed" toggleGroup="$statusGroup"/>
+                        <RadioButton fx:id="mediaApprovedRadio" text="Media Response Approved"
+                                     toggleGroup="$statusGroup"/>
+                        <RadioButton fx:id="crisisPlanRadio" text="Crisis Plan Activated" toggleGroup="$statusGroup"/>
+                    </children>
+                </HBox>
+                <TextArea fx:id="inquiryDetailsArea" promptText="Media Inquiry Details / Press Release Text"
+                          prefRowCount="5"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="submitButton" text="Submit Update"/>
+                    </children>
+                </HBox>
+                <Label text="Brand Communication Log" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="logTable" prefHeight="220.0">
+                    <columns>
+                        <TableColumn fx:id="dateColumn" text="Date" prefWidth="180.0"/>
+                        <TableColumn fx:id="actionColumn" text="Action Taken" prefWidth="260.0"/>
+                        <TableColumn fx:id="outcomeColumn" text="Outcome / Notes" prefWidth="320.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

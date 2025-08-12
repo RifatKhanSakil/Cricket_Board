@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.Sponsor.SponsorshipBrandVisibilityController"
+            prefHeight="620.0" prefWidth="820.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label text="BCB Sponsorship &amp; Brand Visibility"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="sponsorNameField" promptText="Sponsor Name"/>
+                <ComboBox fx:id="sponsorshipTypeCombo" promptText="Select Sponsorship Type"/>
+                <DatePicker fx:id="agreementDatePicker" promptText="Agreement Date"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="stadiumBrandingRadio" text="Stadium Branding"/>
+                        <RadioButton fx:id="digitalAdsRadio" text="Digital Advertisement"/>
+                        <RadioButton fx:id="merchBrandingRadio" text="Merchandise Branding"/>
+                    </children>
+                </HBox>
+                <TextField fx:id="brandingSpaceField" promptText="Requested Branding Space Details"/>
+                <TextArea fx:id="budgetProposalArea" promptText="Advertisement Budget Proposal" prefRowCount="5"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="submitButton" text="Submit Sponsorship Request" onAction="#onSubmitRequest"/>
+                    </children>
+                </HBox>
+                <Label text="Sponsorship Activity Tracker" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="activityTable" prefHeight="220.0">
+                    <columns>
+                        <TableColumn fx:id="activityNameColumn" text="Activity Name" prefWidth="220.0"/>
+                        <TableColumn fx:id="activityDateColumn" text="Date" prefWidth="160.0"/>
+                        <TableColumn fx:id="statusColumn" text="Status" prefWidth="160.0"/>
+                        <TableColumn fx:id="notesColumn" text="Notes" prefWidth="240.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backMenuButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
