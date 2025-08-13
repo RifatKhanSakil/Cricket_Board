@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="431.0" prefWidth="1335.0" style="-fx-background-color: #48C9B0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.Account_Manager.expensesTrackingSystemController">
+    <children>
+        <Label layoutX="14.0" layoutY="21.0" prefHeight="29.0" prefWidth="312.0" text="Amount used for Food and water Supply:">
+            <font>
+                <Font name="Calibri Bold" size="17.0" />
+            </font>
+        </Label>
+        <TextField fx:id="amountUsedForFoodAndWatersupplyTextField" layoutX="338.0" layoutY="20.0" />
+        <Label layoutX="16.0" layoutY="77.0" prefHeight="29.0" prefWidth="312.0" text="Amount of Kits Expenditures:">
+            <font>
+                <Font name="Calibri Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="16.0" layoutY="125.0" prefHeight="29.0" prefWidth="328.0" text="Amount used for training sessions:">
+            <font>
+                <Font name="Calibri Bold" size="17.0" />
+            </font>
+        </Label>
+        <TextField fx:id="amountOfKitsExpenditureTextField" layoutX="338.0" layoutY="76.0" />
+        <TextField fx:id="amountForTraininigSessionTextField" layoutX="338.0" layoutY="124.0" />
+        <Label layoutX="16.0" layoutY="164.0" prefHeight="29.0" prefWidth="312.0" text="Amount used for employees salary:">
+            <font>
+                <Font name="Calibri Bold" size="17.0" />
+            </font>
+        </Label>
+        <TextField fx:id="amountUsedForTotalSalariesTextField" layoutX="338.0" layoutY="163.0" />
+        <ComboBox fx:id="YearExpComboBox" layoutX="60.0" layoutY="210.0" prefWidth="150.0" promptText="Select Year" />
+        <Label layoutX="14.0" layoutY="211.0" prefHeight="29.0" prefWidth="46.0" text="Year:">
+            <font>
+                <Font name="Calibri Bold" size="17.0" />
+            </font>
+        </Label>
+        <Button layoutX="333.0" layoutY="225.0" mnemonicParsing="false" onAction="#totalExpensesDetailsButtonOnClick" prefHeight="39.0" prefWidth="255.0" text="Total Expenses Details">
+            <font>
+                <Font name="Bookman Old Style" size="20.0" />
+            </font>
+        </Button>
+        <Button layoutX="630.0" layoutY="225.0" mnemonicParsing="false" onAction="#expGeneratePieChartButtonOnClick" prefHeight="39.0" prefWidth="255.0" text="Generate PieChart">
+            <font>
+                <Font name="Bookman Old Style" size="20.0" />
+            </font>
+        </Button>
+        <Text fx:id="expTextArea" layoutX="218.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TBA" wrappingWidth="78.99999812245369">
+            <font>
+                <Font name="Century Gothic" size="18.0" />
+            </font>
+        </Text>
+        <Label layoutX="11.0" layoutY="247.0" prefHeight="31.0" prefWidth="207.0" text="Expenses on the Year of:">
+            <font>
+                <Font name="Bookman Old Style Bold" size="15.0" />
+            </font>
+        </Label>
+        <TableView fx:id="totalExpenseDetailsTableView" layoutX="1.0" layoutY="278.0" prefHeight="141.0" prefWidth="1318.0">
+            <columns>
+                <TableColumn fx:id="amountFoodandWatertableCol" prefWidth="167.00003051757812" text="Food and water supply" />
+                <TableColumn fx:id="amountKitExpendituretableCol" minWidth="0.0" prefWidth="148.0" text="Kits Expenditures" />
+                <TableColumn fx:id="amountTrainingSessionTableCol" minWidth="0.0" prefWidth="123.0" text="training sessions" />
+                <TableColumn fx:id="amountEmployeeSalaryTableCol" minWidth="0.0" prefWidth="138.0" text=" employees salary" />
+                <TableColumn fx:id="totalTableCol" minWidth="0.0" prefWidth="60.0" text="Total" />
+                <TableColumn fx:id="averageExpenseTableCol" minWidth="0.0" prefWidth="128.0" text="average expense" />
+                <TableColumn fx:id="perFoodandWaterTableCol" minWidth="0.0" prefWidth="139.0" text="\%(food and water)" />
+                <TableColumn fx:id="perKitExpenditureTableCol" minWidth="0.0" prefWidth="143.0" text="\%(Kit Expenditure)" />
+                <TableColumn fx:id="perTrainingSessionTableCol" minWidth="0.0" prefWidth="135.0" text="\%Training Session" />
+                <TableColumn fx:id="perEmployeeSaalaryTableCol" minWidth="0.0" prefWidth="136.0" text="\%employee salary" />
+            </columns>
+        </TableView>
+        <Button layoutX="931.0" layoutY="222.0" mnemonicParsing="false" onAction="#expenseShowPreviousDataButtonOnClick" prefHeight="39.0" prefWidth="255.0" text="Show Previous data">
+            <font>
+                <Font name="Bookman Old Style" size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

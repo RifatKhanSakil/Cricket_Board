@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="1240.0" style="-fx-background-color: #6082B6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.Account_Manager.incomeManagementController">
+    <children>
+        <Label layoutX="4.0" layoutY="32.0" text="Amount Of Selling Tickets:">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font></Label>
+        <TextField fx:id="sellingTicketsTextArea" layoutX="207.0" layoutY="27.0" prefHeight="31.0" prefWidth="212.0" />
+        <Label layoutX="15.0" layoutY="92.0" prefHeight="22.0" prefWidth="272.0" text="Amount from Sponsorship Deals:">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font></Label>
+        <TextField fx:id="sponsorDealsTextArea" layoutX="277.0" layoutY="88.0" prefHeight="31.0" prefWidth="202.0" />
+        <Label layoutX="15.0" layoutY="150.0" prefHeight="22.0" prefWidth="255.0" text="Amount from Broadcasts rights:">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font></Label>
+        <TextField fx:id="broadcastRightsTextArea" layoutX="272.0" layoutY="146.0" prefHeight="31.0" prefWidth="212.0" />
+        <Button layoutX="763.0" layoutY="92.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="104.0" text="Generate Pie Chart" wrapText="true">
+            <font>
+                <Font size="19.0" />
+            </font></Button>
+        <Label layoutX="33.0" layoutY="398.0" prefHeight="31.0" prefWidth="220.0" text="Income On The Year Of:">
+            <font>
+                <Font name="Calibri" size="18.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="yearIncComboBox" layoutX="510.0" layoutY="27.0" prefWidth="150.0" promptText="Year" />
+        <Label layoutX="441.0" layoutY="27.0" prefHeight="31.0" prefWidth="59.0" text="Year">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font>
+        </Label>
+        <Text fx:id="yearText" fill="#070606" layoutX="218.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="103.99999725818634">
+            <font>
+                <Font name="Calisto MT" size="15.0" />
+            </font>
+        </Text>
+        <Button layoutX="538.0" layoutY="83.0" mnemonicParsing="false" onAction="#totalIncomeButttonOnClick" prefHeight="73.0" prefWidth="143.0" text="Calculate With Details" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+            <font>
+                <Font name="Century Gothic" size="17.0" />
+            </font>
+        </Button>
+        <TableView fx:id="calculateTableView" layoutX="21.0" layoutY="185.0" prefHeight="200.0" prefWidth="1219.0">
+            <columns>
+                <TableColumn fx:id="ticketsAmountTableColumn" prefWidth="118.0" text="Tickets Amount" />
+                <TableColumn fx:id="sponsorshipDealsAmountTableView" minWidth="0.0" prefWidth="199.0" text="Sponsorship Deals Amount" />
+                <TableColumn fx:id="broadcastsRightsAmountTableColumn" minWidth="0.0" prefWidth="193.0" text="Broadcasts rights Amount" />
+                <TableColumn fx:id="totalIncomeTableColumn" minWidth="0.0" prefWidth="95.0" text="totalIncome" />
+                <TableColumn fx:id="sellTickDistTableColumn" minWidth="0.0" prefWidth="210.0" text="sellingTicketsDistribution" />
+                <TableColumn fx:id="sponDealsDistTableColumn" minWidth="0.0" prefWidth="219.0" text="sponsorshipDealsDistribution" />
+                <TableColumn fx:id="broadRightsDistTableColumn" minWidth="0.0" prefWidth="184.0" text="broadRightsDistribution" />
+            </columns>
+        </TableView>
+        <Button layoutX="722.0" layoutY="19.0" mnemonicParsing="false" onAction="#incShowPreviousDataButtonOnClick" prefHeight="48.0" prefWidth="202.0" text="Show Previous Data" wrapText="true">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="121.0" fitWidth="171.0" layoutX="993.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../important%20Netbeans%20Project/images.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

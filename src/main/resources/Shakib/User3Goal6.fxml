@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Shakib.User3Goal6"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="841.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.HR_Manager.PerformancePieChartController">
+    <children>
+        <Label layoutX="470.0" layoutY="29.0" prefHeight="49.0" prefWidth="291.0" text="Performance Pie Chart">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Label>
+        <PieChart fx:id="performancePieChart" layoutX="333.0" layoutY="86.0" prefHeight="417.0" prefWidth="461.0" />
+        <Button layoutX="32.0" layoutY="456.0" mnemonicParsing="false" onAction="#showPieChartButtonOnClicked" prefHeight="31.0" prefWidth="251.0" text="Show Pie Chart " />
+        <TextField fx:id="performanceNameTextField" layoutX="70.0" layoutY="320.0" promptText="Enter Name" text="shuasto" />
+        <ComboBox fx:id="PerformanceScoreCombobox" layoutX="88.0" layoutY="382.0" prefWidth="150.0" promptText="Score" />
+        <Button layoutX="61.0" layoutY="46.0" mnemonicParsing="false" onAction="#showPerformanceScoreButtonOnClicked" text="Show performance Scores" />
+        <TextArea fx:id="performanceTextArea" layoutX="13.0" layoutY="78.0" prefHeight="211.0" prefWidth="301.0" />
+    </children>
 </AnchorPane>

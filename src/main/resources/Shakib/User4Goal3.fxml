@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="381.0" prefWidth="1358.0" style="-fx-background-color: #cc4cff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.Account_Manager.budgetManagementController">
+    <children>
+        <Label layoutX="14.0" layoutY="37.0" text="Approximate Budget For Away Matches :">
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="72.0" text="Approximate Budget For Transportation:">
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="543.0" layoutY="37.0" text="Approximate Budget For Food And Water Supply :">
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="543.0" layoutY="73.0" text="Approximate Budget For Kit Expenditure  :">
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="budgetForAwayMatchesTextField" layoutX="341.0" layoutY="33.0" />
+        <TextField fx:id="budgetForTransportationTextField" layoutX="341.0" layoutY="68.0" />
+        <TextField fx:id="budgetForFoodAndWaterTextField" layoutX="935.0" layoutY="33.0" />
+        <TextField fx:id="budgetFotKitExpenTextField" layoutX="935.0" layoutY="69.0" />
+        <Button layoutX="29.0" layoutY="116.0" mnemonicParsing="false" onAction="#budPDFDownloadButtonOnCLick" text="Download PDF">
+            <font>
+                <Font name="Bookman Old Style" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="232.0" layoutY="116.0" mnemonicParsing="false" onAction="#budDetaisButtonOnClick" prefHeight="33.0" prefWidth="361.0" text="Show Details Of Approximate Budget ">
+            <font>
+                <Font name="Bookman Old Style" size="18.0" />
+            </font>
+        </Button>
+        <TableView fx:id="budgetTableVIew" layoutX="4.0" layoutY="173.0" prefHeight="200.0" prefWidth="1325.0">
+            <columns>
+                <TableColumn fx:id="budForAwayMatchTableCol" prefWidth="214.0" text="approx budget (Away match)" />
+                <TableColumn fx:id="budgetFoodAndWaterTableCol" minWidth="0.0" prefWidth="193.0" text="Approx (Food And Water)" />
+                <TableColumn fx:id="budTransportationTableCol" minWidth="0.0" prefWidth="174.0" text="approx(Transportation)" />
+                <TableColumn fx:id="budKItExpenseTableCol" prefWidth="153.0" text="Approx(Kit Expense)" />
+                <TableColumn fx:id="totalBudTableCol" prefWidth="104.0" text="Total Budget" />
+                <TableColumn fx:id="percenForAwayMatchesTableCol" prefWidth="107.0" text="\%AwayMatch " />
+                <TableColumn fx:id="percentFoodAndWaterTableCol" prefWidth="118.0" text="\%Food&amp;Water" />
+                <TableColumn fx:id="percentTranspoBudTableCol" prefWidth="128.0" text="\%Transportation" />
+                <TableColumn fx:id="perKitExpenditureTableCol" prefWidth="133.0" text="\%Kit Expenditure" />
+            </columns>
+        </TableView>
+        <Button layoutX="639.0" layoutY="116.0" mnemonicParsing="false" onAction="#budBarChartButtonOnClick" text="Generate Bar Chart">
+            <font>
+                <Font name="Bookman Old Style" size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="846.0" layoutY="122.0" prefHeight="22.0" prefWidth="155.0">
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="yearComboBoxBud" layoutX="1136.0" layoutY="33.0" prefHeight="31.0" prefWidth="177.0" promptText="SELECT THE YEAR" />
+        <Label layoutX="846.0" layoutY="122.0" text="Budget of the year:">
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Label>
+        <Text fx:id="yearTxtBuds" layoutX="1003.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TBA" wrappingWidth="51.6708984375">
+            <font>
+                <Font name="Calibri" size="24.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

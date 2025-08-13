@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="688.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.Account_Manager.SalaryPieChartController">
+    <children>
+        <Button layoutX="110.0" layoutY="74.0" mnemonicParsing="false" onAction="#showSalaryPButtonOnClick" prefHeight="31.0" prefWidth="148.0" text="Show Salary" />
+        <TextArea fx:id="salaryTextAreaP" layoutX="46.0" layoutY="119.0" prefHeight="218.0" prefWidth="269.0" />
+        <TextField fx:id="nameSalarypieTxtarea" layoutX="71.0" layoutY="362.0" promptText="Enter name" />
+        <ComboBox fx:id="salaryComboBoxP" layoutX="71.0" layoutY="419.0" prefHeight="31.0" prefWidth="173.0" promptText="Salary" />
+        <Button layoutX="71.0" layoutY="499.0" mnemonicParsing="false" onAction="#showSalaryPieButtonOnclick" prefHeight="31.0" prefWidth="173.0" text="Show Salary PieChart" />
+        <Label layoutX="617.0" layoutY="53.0" prefHeight="21.0" prefWidth="139.0" text="Salary PieChart" />
+        <PieChart fx:id="salaryPieChartArea" layoutX="376.0" layoutY="119.0" />
+    </children>
+</AnchorPane>
