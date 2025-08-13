@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.Sponsor.SponsorshipAmountController"
+            prefHeight="620.0" prefWidth="820.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label text="International Tour Sponsorship" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="orgNameField" promptText="Sponsor Organization Name"/>
+                <ComboBox fx:id="tourDestinationCombo" promptText="Select Tour Destination"/>
+                <DatePicker fx:id="startDatePicker" promptText="Proposed Tour Start Date"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="fullFundingRadio" text="Full Tour Funding"/>
+                        <RadioButton fx:id="partialFundingRadio" text="Partial Funding"/>
+                        <RadioButton fx:id="marketingOnlyRadio" text="Marketing Support Only"/>
+                    </children>
+                </HBox>
+                <TextField fx:id="amountField" promptText="Estimated Sponsorship Amount"/>
+                <TextArea fx:id="proposalDetailsArea" promptText="Funding Proposal Details" prefRowCount="5"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="submitButton" text="Submit Funding Proposal" onAction="#onSubmitProposal"/>
+                    </children>
+                </HBox>
+                <Label text="Tour Sponsorship Tracker" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="trackerTable" prefHeight="240.0">
+                    <columns>
+                        <TableColumn fx:id="tourNameColumn" text="Tour Name" prefWidth="220.0"/>
+                        <TableColumn fx:id="proposalDateColumn" text="Proposal Date" prefWidth="160.0"/>
+                        <TableColumn fx:id="statusColumn" text="Status" prefWidth="160.0"/>
+                        <TableColumn fx:id="notesColumn" text="Notes/Updates" prefWidth="240.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

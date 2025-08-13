@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.Sponsor.SocialMediaImpactController"
+            prefHeight="620.0" prefWidth="820.0">
+    <fx:define>
+        <ToggleGroup fx:id="campaignTypeGroup"/>
+    </fx:define>
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label text="Social Media Impact Management" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="campaignNameField" promptText="Campaign Name"/>
+                <ComboBox fx:id="platformCombo" promptText="Select Platform"/>
+                <DatePicker fx:id="launchDatePicker" promptText="Campaign Launch Date"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="hashtagRadio" text="Hashtag Campaign" toggleGroup="$campaignTypeGroup"/>
+                        <RadioButton fx:id="influencerRadio" text="Influencer Collaboration"
+                                     toggleGroup="$campaignTypeGroup"/>
+                        <RadioButton fx:id="sponsoredRadio" text="Sponsored Posts" toggleGroup="$campaignTypeGroup"/>
+                    </children>
+                </HBox>
+                <TextField fx:id="budgetField" promptText="Approved Budget"/>
+                <TextArea fx:id="detailsArea" promptText="Campaign Details" prefRowCount="5"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="launchButton" text="Launch Campaign"/>
+                    </children>
+                </HBox>
+                <Label text="Campaign Performance Tracker" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="trackerTable" prefHeight="240.0">
+                    <columns>
+                        <TableColumn fx:id="campaignNameColumn" text="Campaign Name" prefWidth="240.0"/>
+                        <TableColumn fx:id="platformColumn" text="Platform" prefWidth="160.0"/>
+                        <TableColumn fx:id="engagementColumn" text="Engagement Rate" prefWidth="160.0"/>
+                        <TableColumn fx:id="statusColumn" text="Status" prefWidth="180.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

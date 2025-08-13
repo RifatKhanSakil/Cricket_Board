@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.TicketBuyer.RefundTicketTransferController"
+            prefHeight="520.0" prefWidth="800.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label fx:id="titleLabel" text="Refund &amp; Ticket Transfer"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="ticketIdField" promptText="Enter Ticket ID"/>
+                <DatePicker fx:id="purchaseDatePicker" promptText="Purchase Date"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="refundRadio" text="Refund"/>
+                        <RadioButton fx:id="transferRadio" text="Transfer"/>
+                    </children>
+                </HBox>
+                <TextField fx:id="friendField" promptText="Friend’s Email or ID" visible="false" managed="false"/>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="submitButton" text="Submit Request" onAction="#onSubmitRequest"/>
+                        <Button fx:id="backButton" text="Back to Account" onAction="#onBackToAccount"/>
+                    </children>
+                </HBox>
+                <TableView fx:id="historyTable" prefHeight="280.0">
+                    <columns>
+                        <TableColumn fx:id="ticketIdColumn" text="Ticket ID" prefWidth="160.0"/>
+                        <TableColumn fx:id="actionTypeColumn" text="Action Type" prefWidth="160.0"/>
+                        <TableColumn fx:id="statusColumn" text="Status" prefWidth="160.0"/>
+                        <TableColumn fx:id="dateProcessedColumn" text="Date Processed" prefWidth="200.0"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

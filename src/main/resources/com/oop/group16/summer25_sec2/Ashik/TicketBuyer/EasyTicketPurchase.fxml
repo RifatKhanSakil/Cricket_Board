@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.TicketBuyer.EasyTicketPurchaseController"
+            prefHeight="400.0" prefWidth="600.0">
+    <fx:define>
+        <ToggleGroup fx:id="ticketTypeGroup"/>
+    </fx:define>
+    <children>
+        <Label fx:id="titleLabel" text="Ticket Purchase" layoutX="220.0" layoutY="14.0"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <ComboBox fx:id="eventComboBox" layoutX="20.0" layoutY="50.0" prefWidth="260.0"
+                  promptText="Select match or event"/>
+
+        <TextField fx:id="buyerInputField" layoutX="300.0" layoutY="50.0" prefWidth="280.0"
+                   promptText="Buyer name or number of tickets"/>
+
+        <HBox layoutX="20.0" layoutY="90.0" spacing="12.0" alignment="CENTER_LEFT">
+            <children>
+                <Label text="Ticket Type:"/>
+                <RadioButton fx:id="regularRadio" text="Regular" toggleGroup="$ticketTypeGroup" selected="true"/>
+                <RadioButton fx:id="vipRadio" text="VIP" toggleGroup="$ticketTypeGroup"/>
+            </children>
+        </HBox>
+
+        <DatePicker fx:id="matchDatePicker" layoutX="300.0" layoutY="90.0" prefWidth="280.0"
+                    promptText="Select match date"/>
+
+        <TableView fx:id="seatsTable" layoutX="20.0" layoutY="140.0" prefHeight="200.0" prefWidth="560.0">
+            <columns>
+                <TableColumn fx:id="seatNumberColumn" text="Seat Number" prefWidth="120.0"/>
+                <TableColumn fx:id="sectionColumn" text="Section" prefWidth="140.0"/>
+                <TableColumn fx:id="priceColumn" text="Price" prefWidth="140.0"/>
+                <TableColumn fx:id="availabilityColumn" text="Availability" prefWidth="160.0"/>
+            </columns>
+        </TableView>
+
+        <Button fx:id="backButton" text="Back to Events" layoutX="20.0" layoutY="350.0" onAction="#handleBackToEvents"/>
+        <Button fx:id="proceedButton" text="Proceed to Payment" layoutX="440.0" layoutY="350.0"
+                onAction="#handleProceedToPayment"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="807.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user7goal8">
+    <children>
+        <Label layoutX="28.0" layoutY="64.0" text="Month:" />
+        <Label layoutX="28.0" layoutY="107.0" text="Supervisor" />
+        <Label layoutX="28.0" layoutY="148.0" text="Project code:" />
+        <Label layoutX="28.0" layoutY="189.0" text="Date of Report:" />
+        <TextField fx:id="projectTextField" layoutX="162.0" layoutY="143.0" prefHeight="31.0" prefWidth="74.0" promptText="1234" />
+        <ComboBox fx:id="supervisorCombobox" layoutX="162.0" layoutY="102.0" prefWidth="150.0" promptText="Select Supervisor" />
+        <ComboBox fx:id="monthCombobox" layoutX="162.0" layoutY="59.0" prefWidth="150.0" promptText="Select Month" />
+        <DatePicker fx:id="reportDatePicker" layoutX="161.0" layoutY="184.0" prefHeight="31.0" prefWidth="187.0" />
+        <Line endX="819.0" endY="378.0" startX="29.0" startY="378.0" />
+        <Button layoutX="548.0" layoutY="172.0" mnemonicParsing="false" onAction="#addShowButtonOnClicked" prefHeight="42.0" prefWidth="125.0" text="Add &amp; Show" />
+        <Label layoutX="28.0" layoutY="548.0" text="Work Hours:" />
+        <Label layoutX="30.0" layoutY="447.0" text="Project name:" />
+        <TextField fx:id="projectNameTextField" layoutX="162.0" layoutY="442.0" promptText="Enter Project Name" />
+        <Label layoutX="29.0" layoutY="500.0" text="Total Cost:" />
+        <TextField fx:id="costTextField" layoutX="162.0" layoutY="495.0" prefHeight="31.0" prefWidth="74.0" promptText="tk" />
+        <ComboBox fx:id="workHoursCombobox" layoutX="162.0" layoutY="543.0" prefHeight="31.0" prefWidth="89.0" promptText="Hours" />
+        <Button layoutX="517.0" layoutY="432.0" mnemonicParsing="false" onAction="#showReportButtonOnClicked" prefHeight="31.0" prefWidth="158.0" text="Show Report" />
+        <Line endX="-54.0" endY="151.0" layoutX="542.0" layoutY="442.0" startX="-54.0" startY="1.0" />
+        <Label layoutX="368.0" layoutY="388.0" text="Report">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="14.0" text="Work &amp; Cost Report">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <Button layoutX="351.0" layoutY="543.0" mnemonicParsing="false" onAction="#addWorkHoursButtonOnClicked" prefHeight="31.0" prefWidth="82.0" text="Add" />
+        <Button layoutX="738.0" layoutY="178.0" mnemonicParsing="false" onAction="#sendButtonOnClicked" prefHeight="31.0" prefWidth="74.0" text="Send" />
+        <Button layoutX="280.0" layoutY="102.0" mnemonicParsing="false" onAction="#downloadButtonOnClicked" prefHeight="31.0" prefWidth="82.0" text="Download" />
+        <Button layoutX="280.0" layoutY="59.0" mnemonicParsing="false" onAction="#downloadButtonOnClicked" prefHeight="31.0" prefWidth="82.0" text="Download" />
+        <Button layoutX="701.0" layoutY="432.0" mnemonicParsing="false" onAction="#chartButtonOnClicked" text="Load Chart" />
+        <TableView fx:id="reportTableView" layoutX="2.0" layoutY="225.0" prefHeight="134.0" prefWidth="833.0">
+            <columns>
+                <TableColumn fx:id="monthColumn" prefWidth="135.0" text="Month" />
+                <TableColumn fx:id="supervisorColumn" prefWidth="98.0" text="Supervisor" />
+                <TableColumn fx:id="projectCodeColumn" prefWidth="124.0" text="Project code" />
+                <TableColumn fx:id="workHoursColumn" prefWidth="122.0" text="Work hours" />
+                <TableColumn fx:id="costColumn" prefWidth="133.0" text="Cost" />
+                <TableColumn fx:id="reportDateColumn" prefWidth="120.0" text="Report Date" />
+            </columns>
+        </TableView>
+        <TableView fx:id="craTableView" layoutX="12.0" layoutY="594.0" prefHeight="200.0" prefWidth="810.0">
+            <columns>
+                <TableColumn fx:id="projectNameColumn" prefWidth="189.0" text="Project name" />
+                <TableColumn fx:id="craSupervisorColumn" prefWidth="140.0" text="Supervisor" />
+                <TableColumn fx:id="craMonthColumn" prefWidth="195.0" text="Month" />
+                <TableColumn fx:id="craWorkHoursColumn" prefWidth="151.0" text="Work Hours" />
+                <TableColumn fx:id="craCostColumn" prefWidth="134.0" text="Total Cost" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

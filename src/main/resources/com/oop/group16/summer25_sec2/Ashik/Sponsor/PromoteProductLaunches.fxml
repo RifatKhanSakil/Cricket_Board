@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.Sponsor.PromoteProductLaunchesController"
+            prefHeight="620.0" prefWidth="820.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label text="Promote Product Launches during Cricket Events"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TitledPane text="Workflow" expanded="true">
+                    <content>
+                        <VBox spacing="8.0" padding="10.0">
+                            <children>
+                                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                    <children>
+                                        <Label text="event-1: Schedule Product Promo at Match"/>
+                                        <Button text="Add" onAction="#onSchedulePromo"/>
+                                    </children>
+                                </HBox>
+                                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                    <children>
+                                        <Label text="event-2: Distribute Branded Merchandise"/>
+                                        <Button text="Add" onAction="#onDistributeMerch"/>
+                                    </children>
+                                </HBox>
+                                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                    <children>
+                                        <Label text="event-3: Analyze Fan Engagement Reports"/>
+                                        <Button text="Add" onAction="#onAnalyzeEngagement"/>
+                                    </children>
+                                </HBox>
+                                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                    <children>
+                                        <Label text="event-4: Evaluate ROI on Product Campaign"/>
+                                        <Button text="Add" onAction="#onEvaluateROI"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </TitledPane>
+                <TextArea fx:id="notesArea" promptText="Notes for the next item" prefRowCount="3"/>
+                <Label text="Promo Workflow Tracker" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="workflowTable" prefHeight="260.0">
+                    <columns>
+                        <TableColumn fx:id="eventNameColumn" text="Event" prefWidth="280.0"/>
+                        <TableColumn fx:id="stageColumn" text="Stage" prefWidth="120.0"/>
+                        <TableColumn fx:id="statusColumn" text="Status" prefWidth="140.0"/>
+                        <TableColumn fx:id="notesColumn" text="Notes" prefWidth="240.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
