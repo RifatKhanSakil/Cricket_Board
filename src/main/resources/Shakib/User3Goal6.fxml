@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="841.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.HR_Manager.PerformancePieChartController">
+<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="841.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.User3Goal6">
     <children>
         <Label layoutX="470.0" layoutY="29.0" prefHeight="49.0" prefWidth="291.0" text="Performance Pie Chart">
             <font>

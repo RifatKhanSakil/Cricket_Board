@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" layoutY="1.0" prefHeight="464.0" prefWidth="600.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.HR_Manager.RecruitEmployeeController">
+<AnchorPane id="AnchorPane" layoutY="1.0" prefHeight="464.0" prefWidth="600.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.user3Goal8">
     <children>
         <Label layoutX="42.0" layoutY="72.0" text="Job position      :" />
         <Label layoutX="40.0" layoutY="121.0" text="Job description  : " />

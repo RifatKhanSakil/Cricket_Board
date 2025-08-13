@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="346.0" prefWidth="530.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.HR_Manager.PaySalariesController">
+<AnchorPane id="AnchorPane" prefHeight="346.0" prefWidth="530.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.User3Goal5">
     <children>
         <Label layoutX="30.0" layoutY="57.0" text="Employee code   :" />
         <Label layoutX="30.0" layoutY="104.0" text="Name                  :" />

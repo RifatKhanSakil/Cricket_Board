@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="600.0" style="-fx-background-color: #CCCCFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.Account_Manager.employeeSalaryCalaculatorController">
+<AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="600.0" style="-fx-background-color: #CCCCFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.User4Goal4">
     <children>
         <Button id="red" layoutX="208.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#CalculateNetSalaryOnButtonClicked" prefHeight="53.0" prefWidth="205.0" text="Calculate Net Salary">
             <font>

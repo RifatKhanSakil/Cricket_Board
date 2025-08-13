@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="688.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.Account_Manager.SalaryPieChartController">
+<AnchorPane id="AnchorPane" prefHeight="688.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.User4Goal8">
     <children>
         <Button layoutX="110.0" layoutY="74.0" mnemonicParsing="false" onAction="#showSalaryPButtonOnClick" prefHeight="31.0" prefWidth="148.0" text="Show Salary" />
         <TextArea fx:id="salaryTextAreaP" layoutX="46.0" layoutY="119.0" prefHeight="218.0" prefWidth="269.0" />

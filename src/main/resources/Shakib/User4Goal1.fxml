@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="1240.0" style="-fx-background-color: #6082B6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shamik_Mondal_2221145.Account_Manager.incomeManagementController">
+<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="1240.0" style="-fx-background-color: #6082B6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.User4Goal1">
     <children>
         <Label layoutX="4.0" layoutY="32.0" text="Amount Of Selling Tickets:">
             <font>
