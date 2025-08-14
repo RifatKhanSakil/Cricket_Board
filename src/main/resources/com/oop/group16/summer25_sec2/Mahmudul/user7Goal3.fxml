@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user7goal1">
+    <children>
+        <Label layoutX="28.0" layoutY="64.0" text="Visitor name   :" />
+        <Label layoutX="28.0" layoutY="107.0" text="Access Areas" />
+        <Label layoutX="28.0" layoutY="148.0" text="Pass ID     :" />
+        <Label layoutX="28.0" layoutY="189.0" text="Visit Date        :" />
+        <TextField fx:id="visitorNameTextField" layoutX="162.0" layoutY="59.0" promptText="          Enter Name" />
+        <TextField fx:id="passIdTextField" layoutX="162.0" layoutY="143.0" prefHeight="31.0" prefWidth="74.0" promptText="  ID" />
+        <ComboBox fx:id="accessAreasCombobox" layoutX="162.0" layoutY="102.0" prefWidth="150.0" promptText="Select Areas" />
+        <DatePicker fx:id="visitDatePicker" layoutX="161.0" layoutY="184.0" prefHeight="31.0" prefWidth="187.0" />
+        <Line endX="819.0" endY="378.0" startX="29.0" startY="378.0" />
+        <Button layoutX="548.0" layoutY="172.0" mnemonicParsing="false" onAction="#generatePassButtonOnClicked" prefHeight="42.0" prefWidth="125.0" text="Generate Pass" />
+        <Label layoutX="30.0" layoutY="447.0" text="Search Visitor   :" />
+        <TextField fx:id="searchVisitorTextField" layoutX="162.0" layoutY="442.0" promptText="          Enter Name" />
+        <Label layoutX="29.0" layoutY="500.0" text="Search Pass ID     :" />
+        <TextField fx:id="searchPassIdTextField" layoutX="162.0" layoutY="495.0" prefHeight="31.0" prefWidth="74.0" promptText="  ID" />
+        <Button layoutX="517.0" layoutY="432.0" mnemonicParsing="false" onAction="#searchPassButtonOnClicked" prefHeight="31.0" prefWidth="158.0" text="Search Pass" />
+        <Line endX="-54.0" endY="151.0" layoutX="542.0" layoutY="442.0" startX="-54.0" startY="1.0" />
+        <Label layoutX="368.0" layoutY="388.0" text="Existing Passes">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="14.0" text="Visitor Management">
+            <font>
+                <Font name="System Bold Italic" size="21.0" />
+            </font>
+        </Label>
+        <Button layoutX="351.0" layoutY="495.0" mnemonicParsing="false" onAction="#revokePassButtonOnClicked" prefHeight="31.0" prefWidth="82.0" text="Revoke" />
+        <Button layoutX="738.0" layoutY="178.0" mnemonicParsing="false" onAction="#printPassButtonOnClicked" prefHeight="31.0" prefWidth="74.0" text="Print" />
+        <TableView fx:id="visitorTableView" layoutX="2.0" layoutY="225.0" prefHeight="134.0" prefWidth="833.0">
+            <columns>
+                <TableColumn fx:id="visitorNameColumn" prefWidth="135.0" text="Visitor name" />
+                <TableColumn fx:id="accessAreasColumn" prefWidth="98.0" text="Access Areas" />
+                <TableColumn fx:id="passIdColumn" prefWidth="124.0" text="Pass ID" />
+                <TableColumn fx:id="visitDateColumn" prefWidth="122.0" text="Visit Date" />
+                <TableColumn fx:id="statusColumn" prefWidth="133.0" text="Status" />
+            </columns>
+        </TableView>
+        <TableView fx:id="searchResultsTableView" layoutX="12.0" layoutY="594.0" prefHeight="200.0" prefWidth="810.0">
+            <columns>
+                <TableColumn fx:id="searchVisitorNameColumn" prefWidth="189.0" text="Visitor name" />
+                <TableColumn fx:id="searchAccessAreasColumn" prefWidth="140.0" text="Access Areas" />
+                <TableColumn fx:id="searchPassIdColumn" prefWidth="195.0" text="Pass ID" />
+                <TableColumn fx:id="searchVisitDateColumn" prefWidth="151.0" text="Visit Date" />
+                <TableColumn fx:id="searchStatusColumn" prefWidth="134.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

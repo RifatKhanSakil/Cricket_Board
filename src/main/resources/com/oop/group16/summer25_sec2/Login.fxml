@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.LoginController"
+            prefHeight="240.0" prefWidth="460.0">
+    <children>
+        <Label text="Bangladesh Crickegt Board"
+               AnchorPane.topAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0"/>
+        <ComboBox fx:id="userComboBox" promptText="Select user"
+                  AnchorPane.topAnchor="90.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0"/>
+        <Button text="Submit" onAction="#onSubmit"
+                AnchorPane.topAnchor="140.0" AnchorPane.leftAnchor="40.0" prefWidth="120.0"/>
+    </children>
+</AnchorPane>

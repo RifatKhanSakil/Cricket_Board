@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.TicketBuyer.LiveMatchUpdatesController"
+            prefHeight="400.0" prefWidth="700.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label fx:id="titleLabel" text="Live Match Updates"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <ComboBox fx:id="matchComboBox" promptText="Select match to view updates"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <TextField fx:id="searchField" promptText="Search player or event" HBox.hgrow="ALWAYS"/>
+                        <DatePicker fx:id="datePicker"/>
+                    </children>
+                </HBox>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="scoreboardRadio" text="Scoreboard"/>
+                        <RadioButton fx:id="playerStatsRadio" text="Player Stats"/>
+                    </children>
+                </HBox>
+                <TableView fx:id="eventsTable" prefHeight="250.0">
+                    <columns>
+                        <TableColumn fx:id="timeColumn" text="Time" prefWidth="100.0"/>
+                        <TableColumn fx:id="eventTypeColumn" text="Event Type" prefWidth="150.0"/>
+                        <TableColumn fx:id="playerNameColumn" text="Player Name" prefWidth="200.0"/>
+                        <TableColumn fx:id="teamColumn" text="Team" prefWidth="150.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="refreshButton" text="Refresh Updates" onAction="#onRefreshUpdates"/>
+                        <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

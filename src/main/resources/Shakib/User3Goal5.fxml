@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="346.0" prefWidth="530.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.User3Goal5">
+    <children>
+        <Label layoutX="30.0" layoutY="57.0" text="Employee code   :" />
+        <Label layoutX="30.0" layoutY="104.0" text="Name                  :" />
+        <Label layoutX="28.0" layoutY="253.0" text="Salary                  :" />
+        <Label layoutX="30.0" layoutY="202.0" text="Select Date         : " />
+        <TextField fx:id="codeTextField" layoutX="162.0" layoutY="52.0" prefHeight="31.0" prefWidth="140.0" />
+        <TextField fx:id="nameTextField" layoutX="162.0" layoutY="99.0" prefHeight="31.0" prefWidth="140.0" />
+        <TextField fx:id="salaryTextField" layoutX="168.0" layoutY="248.0" prefHeight="31.0" prefWidth="140.0" />
+        <ComboBox fx:id="monthComboBox" layoutX="169.0" layoutY="197.0" prefHeight="31.0" prefWidth="117.0" promptText="Month" />
+        <ComboBox fx:id="yearComboBox" layoutX="324.0" layoutY="197.0" prefHeight="31.0" prefWidth="117.0" promptText="Year" />
+        <Button layoutX="402.0" layoutY="65.0" mnemonicParsing="false" onAction="#PayButtonOnClicked" prefHeight="100.0" prefWidth="117.0" text="Pay &amp; Check Status" textAlignment="CENTER" wrapText="true" />
+        <Label layoutX="228.0" layoutY="14.0" prefHeight="31.0" prefWidth="117.0" text="Pay Salaries ">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="checkStatusTextArea" layoutX="392.0" layoutY="274.0" prefHeight="60.0" prefWidth="127.0" />
+        <ComboBox fx:id="departmentCombobox" layoutX="163.0" layoutY="150.0" onAction="#departmentComboboxOnAction" prefWidth="150.0" promptText="Department" />
+        <Label layoutX="30.0" layoutY="155.0" text="Department        :" />
+    </children>
+</AnchorPane>

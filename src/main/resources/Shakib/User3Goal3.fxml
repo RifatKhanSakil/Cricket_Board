@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.HR_Manager.HRleaveController">
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.User3Goal3">
     <children>
         <TextField fx:id="statusTextField" editable="false" layoutX="7.0" layoutY="134.0" promptText="                Status" />
         <ComboBox fx:id="daysCombobox" layoutX="11.0" layoutY="172.0" prefHeight="31.0" prefWidth="180.0" promptText="Select days" />

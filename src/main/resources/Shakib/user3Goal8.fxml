@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" layoutY="1.0" prefHeight="464.0" prefWidth="600.0" style="-fx-background-color: #5F8575;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shakib.user3Goal8">
+    <children>
+        <Label layoutX="42.0" layoutY="72.0" text="Job position      :" />
+        <Label layoutX="40.0" layoutY="121.0" text="Job description  : " />
+        <Label layoutX="41.0" layoutY="171.0" text="Requirement      :" />
+        <Label layoutX="41.0" layoutY="215.0" text="Salary range       :" />
+        <TextField fx:id="salaryRangeTextField" layoutX="171.0" layoutY="210.0" />
+        <TextField fx:id="descriptionTextField" layoutX="171.0" layoutY="116.0" />
+        <TextField fx:id="requirementTextField" layoutX="171.0" layoutY="166.0" />
+        <Button layoutX="478.0" layoutY="355.0" mnemonicParsing="false" onAction="#showPostButtonOnClicked" prefHeight="45.0" prefWidth="89.0" text="Show Post" />
+        <Button layoutX="433.0" layoutY="72.0" mnemonicParsing="false" onAction="#recruitmentPostButtonOnClicked" prefHeight="157.0" prefWidth="134.0" text="Recruitment Post" />
+        <ComboBox fx:id="departmentComboBox" layoutX="171.0" layoutY="67.0" prefHeight="31.0" prefWidth="187.0" promptText="Select Department" />
+        <TextArea fx:id="outputTextArea" layoutX="14.0" layoutY="318.0" prefHeight="119.0" prefWidth="451.0" />
+        <Line endX="463.0" layoutX="115.0" layoutY="275.0" startX="-100.0" />
+        <Label layoutX="189.0" layoutY="14.0" prefHeight="31.0" prefWidth="222.0" text="Add Job Recruitment Post">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="14.0" layoutY="281.0" mnemonicParsing="false" onAction="#downloadPdfButtonOnClicked" text="Download PDF" />
+    </children>
+</AnchorPane>

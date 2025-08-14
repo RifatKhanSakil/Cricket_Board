@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.oop.group16.summer25_sec2.Ashik.TicketBuyer.SeatAvailabilityController"
+            prefHeight="450.0" prefWidth="750.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Label fx:id="titleLabel" text="Seat Availability" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <ComboBox fx:id="matchComboBox" promptText="Select match or event"/>
+                <HBox spacing="10.0">
+                    <children>
+                        <TextField fx:id="searchField" promptText="Search by seat number or block" HBox.hgrow="ALWAYS"/>
+                        <DatePicker fx:id="datePicker"/>
+                    </children>
+                </HBox>
+                <HBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="allSeatsRadio" text="All Seats"/>
+                        <RadioButton fx:id="availableOnlyRadio" text="Available Only"/>
+                    </children>
+                </HBox>
+                <TableView fx:id="seatsTable" prefHeight="280.0">
+                    <columns>
+                        <TableColumn fx:id="seatNumberColumn" text="Seat Number" prefWidth="140.0"/>
+                        <TableColumn fx:id="blockRowColumn" text="Block/Row" prefWidth="180.0"/>
+                        <TableColumn fx:id="priceColumn" text="Price" prefWidth="120.0"/>
+                        <TableColumn fx:id="availabilityColumn" text="Availability" prefWidth="160.0"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="addToWaitlistButton" text="Add to Waitlist" onAction="#onAddToWaitlist"/>
+                        <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenu"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
