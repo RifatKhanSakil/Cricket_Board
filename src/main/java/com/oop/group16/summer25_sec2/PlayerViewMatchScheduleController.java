@@ -3,24 +3,25 @@ package com.oop.group16.summer25_sec2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class PlayerViewPerformanceStatsController
+public class PlayerViewMatchScheduleController
 {
     @javafx.fxml.FXML
-    private Label averageLabel;
+    private TableView matchTable;
     @javafx.fxml.FXML
     private TextField dateRangeField;
     @javafx.fxml.FXML
-    private Label runsLabel;
+    private TableColumn opponentColumn;
     @javafx.fxml.FXML
-    private TextField matchTypeField;
+    private TableColumn matchDateColumn;
     @javafx.fxml.FXML
-    private Label strikeRateLabel;
+    private TableColumn venueColumn;
     @javafx.fxml.FXML
-    private Label wicketsLabel;
+    private TableColumn matchTypeColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -42,6 +43,6 @@ public class PlayerViewPerformanceStatsController
     }
 
     @javafx.fxml.FXML
-    public void loadStatsOnAction(ActionEvent actionEvent) {
+    public void loadScheduleOnAction(ActionEvent actionEvent) {
     }
 }

@@ -52,15 +52,59 @@ public class PlayerDashboard
     }
 
     public void viewMatchScheduleOnAction(javafx.event.ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerViewMatchSchedule.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
     }
 
     public void submitAvailabilityOnAction(javafx.event.ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerSubmitAvailability.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
     }
 
     public void massageCoachOnAction(javafx.event.ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerMessageCoach.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
     }
 
     public void downloadReportOnAction(javafx.event.ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerDownloadFitnessReport.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
     }
 
     public void logOutOnAction(javafx.event.ActionEvent actionEvent) {

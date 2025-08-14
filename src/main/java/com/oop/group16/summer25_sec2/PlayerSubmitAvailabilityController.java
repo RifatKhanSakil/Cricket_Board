@@ -3,24 +3,18 @@ package com.oop.group16.summer25_sec2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.DatePicker;
 import javafx.stage.Stage;
 
-public class PlayerViewPerformanceStatsController
+public class PlayerSubmitAvailabilityController
 {
     @javafx.fxml.FXML
-    private Label averageLabel;
+    private CheckBox unavailableCheckBox;
     @javafx.fxml.FXML
-    private TextField dateRangeField;
+    private DatePicker availabilityDatePicker;
     @javafx.fxml.FXML
-    private Label runsLabel;
-    @javafx.fxml.FXML
-    private TextField matchTypeField;
-    @javafx.fxml.FXML
-    private Label strikeRateLabel;
-    @javafx.fxml.FXML
-    private Label wicketsLabel;
+    private CheckBox availableCheckBox;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -42,6 +36,6 @@ public class PlayerViewPerformanceStatsController
     }
 
     @javafx.fxml.FXML
-    public void loadStatsOnAction(ActionEvent actionEvent) {
+    public void submitAvailabilityOnAction(ActionEvent actionEvent) {
     }
 }

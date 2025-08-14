@@ -3,24 +3,16 @@ package com.oop.group16.summer25_sec2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class PlayerViewPerformanceStatsController
+public class PlayerMessageCoachController
 {
     @javafx.fxml.FXML
-    private Label averageLabel;
+    private TextArea messageArea;
     @javafx.fxml.FXML
-    private TextField dateRangeField;
-    @javafx.fxml.FXML
-    private Label runsLabel;
-    @javafx.fxml.FXML
-    private TextField matchTypeField;
-    @javafx.fxml.FXML
-    private Label strikeRateLabel;
-    @javafx.fxml.FXML
-    private Label wicketsLabel;
+    private TextField subjectField;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -42,6 +34,6 @@ public class PlayerViewPerformanceStatsController
     }
 
     @javafx.fxml.FXML
-    public void loadStatsOnAction(ActionEvent actionEvent) {
+    public void sendMessageOnAction(ActionEvent actionEvent) {
     }
 }
