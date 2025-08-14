@@ -23,5 +23,6 @@
       <Button fx:id="logOutButton" layoutX="496.0" layoutY="340.0" onAction="#logOutOnAction" text="Log Out" />
       <Button fx:id="updateFitnessInformationButton" layoutX="248.0" layoutY="80.0" mnemonicParsing="false" onAction="#updateFitnessInformationOnAction" text="Update Fitness Information" />
       <Button fx:id="teamRankingButton" layoutX="248.0" layoutY="130.0" mnemonicParsing="false" onAction="#teamRankingOnAction" text="Team Ranking" />
+      <Button fx:id="leaveRequestButton" layoutX="248.0" layoutY="180.0" mnemonicParsing="false" onAction="#leaveRequestOnAction" text="Leave Request" />
    </children>
 </AnchorPane>

@@ -25,6 +25,8 @@ public class Player
     private Button updateFitnessInformationButton;
     @javafx.fxml.FXML
     private Button teamRankingButton;
+    @javafx.fxml.FXML
+    private Button leaveRequestButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -140,6 +142,21 @@ public class Player
     public void teamRankingOnAction(ActionEvent actionEvent) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerTeamRankingsView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void leaveRequestOnAction(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerRequestLeave.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage=new Stage();
             stage.setTitle("Hello!");
