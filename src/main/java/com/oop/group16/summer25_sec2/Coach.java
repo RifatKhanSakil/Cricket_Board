@@ -2,7 +2,7 @@ package com.oop.group16.summer25_sec2;
 
 import javafx.event.ActionEvent;
 
-public class CoachDashboardController
+public class Coach
 {
     @javafx.fxml.FXML
     public void initialize() {

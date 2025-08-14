@@ -47,6 +47,14 @@ public class LoginController implements Initializable {
             open(event, "/com/oop/group16/summer25_sec2/Ashik/TicketBuyer/MenuTicketBuyer.fxml", "Ticket Buyer Menu");
             return;
         }
+        if (selected.contains("Player")) {
+            open(event, "/com/oop/group16/summer25_sec2/Player.fxml", "Player Dashboard");
+            return;
+        }
+        if (selected.contains("Coach")) {
+            open(event, "/com/oop/group16/summer25_sec2/Coach.fxml", "Coach Dashboard");
+            return;
+        }
         if (selected.contains("Sponsor")) {
             open(event, "/com/oop/group16/summer25_sec2/Ashik/Sponsor/MenuSponsor.fxml", "Sponsor Menu");
             return;

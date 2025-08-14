@@ -1,31 +1,25 @@
 package com.oop.group16.summer25_sec2;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class PlayerDownloadFitnessReportController
+public class PlayerUpdateFitnessInformationController
 {
     @javafx.fxml.FXML
-    private TableColumn bmiColumn;
+    private TextField yoYoScoreField;
     @javafx.fxml.FXML
-    private TableColumn reportDateColumn;
+    private TextField remarksField;
     @javafx.fxml.FXML
-    private TableColumn heartRateColumn;
-    @javafx.fxml.FXML
-    private TableView fitnessReportTable;
-    @javafx.fxml.FXML
-    private TableColumn staminaColumn;
+    private TextField bmiField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void returnOnAction(ActionEvent actionEvent) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Player.fxml"));
@@ -41,6 +35,6 @@ public class PlayerDownloadFitnessReportController
     }
 
     @javafx.fxml.FXML
-    public void downloadReportOnAction(ActionEvent actionEvent) {
+    public void submitFitnessOnAction(ActionEvent actionEvent) {
     }
 }

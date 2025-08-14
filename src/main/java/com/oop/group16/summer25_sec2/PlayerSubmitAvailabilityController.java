@@ -23,7 +23,7 @@ public class PlayerSubmitAvailabilityController
     @javafx.fxml.FXML
     public void returnOnAction(ActionEvent actionEvent) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerDashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Player.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage=new Stage();
             stage.setTitle("Hello!");
