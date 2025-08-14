@@ -15,27 +15,35 @@
         <Label fx:id="titleLabel" text="Ticket Purchase" layoutX="220.0" layoutY="14.0"
                style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
 
-        <ComboBox fx:id="eventComboBox" layoutX="20.0" layoutY="50.0" prefWidth="260.0"
-                  promptText="Select match or event"/>
-
-        <TextField fx:id="buyerInputField" layoutX="300.0" layoutY="50.0" prefWidth="280.0"
-                   promptText="Buyer name or number of tickets"/>
-
-        <HBox layoutX="20.0" layoutY="90.0" spacing="12.0" alignment="CENTER_LEFT">
+        <VBox layoutX="20.0" layoutY="50.0" spacing="10.0">
             <children>
-                <Label text="Ticket Type:"/>
-                <RadioButton fx:id="regularRadio" text="Regular" toggleGroup="$ticketTypeGroup" selected="true"/>
-                <RadioButton fx:id="vipRadio" text="VIP" toggleGroup="$ticketTypeGroup"/>
+                <HBox spacing="20.0" alignment="CENTER_LEFT">
+                    <children>
+                        <TextField fx:id="matchTextField" prefWidth="260.0" promptText="Enter match or event"/>
+                        <TextField fx:id="buyerInputField" prefWidth="280.0"
+                                   promptText="Buyer name or number of tickets"/>
+                    </children>
+                </HBox>
+                <HBox spacing="12.0" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Ticket Type:"/>
+                        <RadioButton fx:id="regularRadio" text="Regular" toggleGroup="$ticketTypeGroup"
+                                     selected="true"/>
+                        <RadioButton fx:id="vipRadio" text="VIP" toggleGroup="$ticketTypeGroup"/>
+                        <Label text="Price:"/>
+                        <ComboBox fx:id="priceComboBox" promptText="Select price" editable="false" prefWidth="120.0"/>
+                        <Label text="Seat Tier:"/>
+                        <ComboBox fx:id="seatTierComboBox" promptText="Select tier" prefWidth="120.0"/>
+                    </children>
+                </HBox>
+                <DatePicker fx:id="matchDatePicker" prefWidth="280.0" promptText="Select match date"/>
             </children>
-        </HBox>
+        </VBox>
 
-        <DatePicker fx:id="matchDatePicker" layoutX="300.0" layoutY="90.0" prefWidth="280.0"
-                    promptText="Select match date"/>
-
-        <TableView fx:id="seatsTable" layoutX="20.0" layoutY="140.0" prefHeight="200.0" prefWidth="560.0">
+        <TableView fx:id="seatsTable" layoutX="20.0" layoutY="160.0" prefHeight="200.0" prefWidth="560.0">
             <columns>
-                <TableColumn fx:id="seatNumberColumn" text="Seat Number" prefWidth="120.0"/>
-                <TableColumn fx:id="sectionColumn" text="Section" prefWidth="140.0"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="140.0"/>
+                <TableColumn fx:id="sectionColumn" text="Seat Tier" prefWidth="140.0"/>
                 <TableColumn fx:id="priceColumn" text="Price" prefWidth="140.0"/>
                 <TableColumn fx:id="availabilityColumn" text="Availability" prefWidth="160.0"/>
             </columns>

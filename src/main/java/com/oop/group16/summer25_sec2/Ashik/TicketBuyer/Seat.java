@@ -8,6 +8,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Seat {
+    private final StringProperty name = new SimpleStringProperty(this, "name");
     private final StringProperty seatNumber = new SimpleStringProperty(this, "seatNumber");
     private final StringProperty section = new SimpleStringProperty(this, "section");
     private final DoubleProperty price = new SimpleDoubleProperty(this, "price");
@@ -18,6 +19,18 @@ public class Seat {
         setSection(section);
         setPrice(price);
         setAvailable(available);
+    }
+
+    public String getName() {
+        return name.get();
+    }
+
+    public void setName(String value) {
+        name.set(value);
+    }
+
+    public StringProperty nameProperty() {
+        return name;
     }
 
     public String getSeatNumber() {

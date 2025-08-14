@@ -15,7 +15,7 @@ public class EasyTicketPurchaseController {
     @FXML
     private Label titleLabel;
     @FXML
-    private ComboBox<String> eventComboBox;
+    private TextField matchTextField;
     @FXML
     private TextField buyerInputField;
     @FXML
@@ -26,11 +26,15 @@ public class EasyTicketPurchaseController {
     private RadioButton vipRadio;
     @FXML
     private DatePicker matchDatePicker;
+    @FXML
+    private ComboBox<String> priceComboBox;
+    @FXML
+    private ComboBox<String> seatTierComboBox;
 
     @FXML
     private TableView<Seat> seatsTable;
     @FXML
-    private TableColumn<Seat, String> seatNumberColumn;
+    private TableColumn<Seat, String> nameColumn;
     @FXML
     private TableColumn<Seat, String> sectionColumn;
     @FXML
@@ -43,18 +47,21 @@ public class EasyTicketPurchaseController {
     @FXML
     private void initialize() {
 
-        seatNumberColumn.setCellValueFactory(new PropertyValueFactory<>("seatNumber"));
-        sectionColumn.setCellValueFactory(new PropertyValueFactory<>("section"));
-        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        nameColumn.setCellValueFactory(cell -> cell.getValue().nameProperty());
+        sectionColumn.setCellValueFactory(cell -> cell.getValue().sectionProperty());
+        priceColumn.setCellValueFactory(cell -> cell.getValue().priceProperty());
         availabilityColumn.setCellValueFactory(cell -> new ReadOnlyStringWrapper(
                 cell.getValue().isAvailable() ? "Available" : "Sold"
         ));
 
-        eventComboBox.setItems(FXCollections.observableArrayList(
-                "Match A: Team X vs Team Y",
-                "Match B: Team Z vs Team W",
-                "Concert: Star Live"
+        // Set up selectable tiers (up to 3)
+        seatTierComboBox.setItems(FXCollections.observableArrayList(
+                "Tier 1", "Tier 2", "Tier 3"
         ));
+        // Map tier selection to price
+        seatTierComboBox.getSelectionModel().selectedItemProperty().addListener((obs, oldTier, newTier) -> {
+            updatePriceForTier(newTier);
+        });
 
         seatData.clear();
         seatsTable.setItems(seatData);
@@ -65,13 +72,15 @@ public class EasyTicketPurchaseController {
 
     @FXML
     private void handleProceedToPayment(ActionEvent event) {
-        String selectedEvent = eventComboBox.getSelectionModel().getSelectedItem();
+        String selectedMatch = matchTextField == null ? null : matchTextField.getText();
         LocalDate date = matchDatePicker.getValue();
         String buyer = buyerInputField.getText() == null ? "" : buyerInputField.getText().trim();
         String ticketType = ((RadioButton) ticketTypeGroup.getSelectedToggle()).getText();
+        String tier = seatTierComboBox != null ? seatTierComboBox.getValue() : null;
+        String priceText = priceComboBox != null ? priceComboBox.getValue() : null;
 
-        if (selectedEvent == null || selectedEvent.isBlank()) {
-            showAlert(Alert.AlertType.WARNING, "Please select a match or event.");
+        if (selectedMatch == null || selectedMatch.isBlank()) {
+            showAlert(Alert.AlertType.WARNING, "Please enter a match or event.");
             return;
         }
         if (date == null) {
@@ -83,20 +92,34 @@ public class EasyTicketPurchaseController {
             return;
         }
 
-        Seat selectedSeat = seatsTable.getSelectionModel().getSelectedItem();
-        if (selectedSeat == null) {
-            showAlert(Alert.AlertType.INFORMATION, "No seat selected. Proceeding without seat selection.");
-        }
+        // Append current inputs as a new row in the table
+        double price = parsePrice(priceText);
+        Seat newRow = new Seat("", tier != null ? tier : "", price, true);
+        newRow.setName(buyer);
+        seatData.add(newRow);
 
-        String summary = String.format(
-                "Event: %s\nDate: %s\nBuyer/Count: %s\nType: %s\nSeat: %s",
-                selectedEvent,
+        String header = String.format(
+                "Event: %s\nDate: %s\nBuyer/Count: %s\nType: %s\nTier: %s\nPrice: %s",
+                selectedMatch,
                 date,
                 buyer,
                 ticketType,
-                selectedSeat != null ? selectedSeat.getSeatNumber() : "(none)"
+                tier != null ? tier : "(none)",
+                priceText != null ? priceText : "(none)"
         );
-        showAlert(Alert.AlertType.INFORMATION, "Proceeding to payment...\n\n" + summary);
+        String tableSummary = buildTableDataSummary();
+        showAlert(Alert.AlertType.INFORMATION, header + "\n\nTable Data:\n" + tableSummary);
+
+        // Reset the form for the next entry
+        if (matchTextField != null) matchTextField.clear();
+        if (buyerInputField != null) buyerInputField.clear();
+        if (seatTierComboBox != null) seatTierComboBox.getSelectionModel().clearSelection();
+        if (priceComboBox != null) {
+            priceComboBox.getItems().clear();
+            priceComboBox.setValue(null);
+        }
+        if (regularRadio != null) regularRadio.setSelected(true);
+        if (matchDatePicker != null) matchDatePicker.setValue(LocalDate.now());
     }
 
     @FXML
@@ -110,5 +133,58 @@ public class EasyTicketPurchaseController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    private void updatePriceForTier(String tier) {
+        if (priceComboBox == null) return;
+        if (tier == null || tier.isBlank()) {
+            priceComboBox.getItems().clear();
+            priceComboBox.setValue(null);
+            return;
+        }
+        String priceValue;
+        switch (tier) {
+            case "Tier 1":
+                priceValue = "$50";
+                break;
+            case "Tier 2":
+                priceValue = "$250";
+                break;
+            case "Tier 3":
+                priceValue = "$1199";
+                break;
+            default:
+                priceValue = null;
+        }
+        priceComboBox.getItems().setAll(priceValue);
+        priceComboBox.setValue(priceValue);
+        priceComboBox.setEditable(false);
+    }
+
+    private double parsePrice(String text) {
+        if (text == null) return 0.0;
+        String digits = text.replaceAll("[^0-9.]", "");
+        if (digits.isEmpty()) return 0.0;
+        try {
+            return Double.parseDouble(digits);
+        } catch (NumberFormatException e) {
+            return 0.0;
+        }
+    }
+
+    private String buildTableDataSummary() {
+        if (seatsTable == null || seatsTable.getItems() == null || seatsTable.getItems().isEmpty()) {
+            return "(no rows)";
+        }
+        StringBuilder sb = new StringBuilder();
+        for (Seat s : seatsTable.getItems()) {
+            if (s == null) continue;
+            String name = s.getName() != null ? s.getName() : "";
+            String tier = s.getSection() != null ? s.getSection() : "";
+            String price = String.format("$%.2f", s.getPrice());
+            String status = s.isAvailable() ? "Available" : "Sold";
+            sb.append(String.format("Name: %s, Tier: %s, Price: %s, Status: %s", name, tier, price, status)).append('\n');
+        }
+        return sb.toString().trim();
     }
 }
