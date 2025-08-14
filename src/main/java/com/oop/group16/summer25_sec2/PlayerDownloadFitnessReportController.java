@@ -1,6 +1,7 @@
 package com.oop.group16.summer25_sec2;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
@@ -24,7 +25,7 @@ public class PlayerDownloadFitnessReportController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void returnOnAction(ActionEvent actionEvent) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerDashboard.fxml"));
