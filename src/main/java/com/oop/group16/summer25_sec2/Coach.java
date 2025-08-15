@@ -98,4 +98,31 @@ public class Coach
             System.out.println(" ");
         }
     }
+
+    @javafx.fxml.FXML
+    public void LeaveRequestOnAction(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CoachLeaveRequestsView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void TeamLeadershipOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void SeasonStatsOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void TeamSelectionOnAction(ActionEvent actionEvent) {
+    }
 }

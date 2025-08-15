@@ -12,10 +12,14 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <Button fx:id="viewPlayerReportsButton" layoutX="61.0" layoutY="174.0" mnemonicParsing="false" onAction="#viewPlayerReportsOnAction" text="View Player Reports" />
+      <Button fx:id="viewPlayerReportsButton" layoutX="57.0" layoutY="187.0" mnemonicParsing="false" onAction="#viewPlayerReportsOnAction" text="View Player Reports" />
       <Button fx:id="LogOutButton" layoutX="473.0" layoutY="310.0" mnemonicParsing="false" onAction="#LogOutOnAction" text="Log Out" />
       <Button fx:id="AssignTrainingSessionButton" layoutX="61.0" layoutY="99.0" mnemonicParsing="false" onAction="#AssignTrainingSessionOnAction" text="Assign Training Session" />
       <Button fx:id="FitnessReviewButton" layoutX="61.0" layoutY="139.0" mnemonicParsing="false" onAction="#FitnessReviewOnAction" text="Fitness Review" />
-      <Button fx:id="StrategicPlanningButton" layoutX="61.0" layoutY="218.0" mnemonicParsing="false" onAction="#StrategicPlanningOnAction" text="Strategic Planning" />
+      <Button fx:id="StrategicPlanningButton" layoutX="61.0" layoutY="233.0" mnemonicParsing="false" onAction="#StrategicPlanningOnAction" text="Strategic Planning" />
+      <Button layoutX="300.0" layoutY="99.0" mnemonicParsing="false" onAction="#LeaveRequestOnAction" text="Leave Request" />
+      <Button layoutX="300.0" layoutY="139.0" mnemonicParsing="false" onAction="#SeasonStatsOnAction" text="Season Stats" />
+      <Button layoutX="300.0" layoutY="187.0" mnemonicParsing="false" onAction="#TeamLeadershipOnAction" text="Team Leadership" />
+      <Button layoutX="300.0" layoutY="233.0" mnemonicParsing="false" onAction="#TeamSelectionOnAction" text="Team Selection" />
    </children>
 </AnchorPane>
