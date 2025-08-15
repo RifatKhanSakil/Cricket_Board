@@ -11,15 +11,15 @@ import javafx.stage.Stage;
 public class PlayerRequestLeaveController
 {
     @javafx.fxml.FXML
-    private TextField leaveTypeField;
-    @javafx.fxml.FXML
-    private DatePicker endDatePicker;
-    @javafx.fxml.FXML
-    private DatePicker startDatePicker;
-    @javafx.fxml.FXML
-    private TextField reasonField;
+    private DatePicker endDateDatePicker;
     @javafx.fxml.FXML
     private Label titleLabel;
+    @javafx.fxml.FXML
+    private TextField leaveTypeTextField;
+    @javafx.fxml.FXML
+    private TextField reasonTextField;
+    @javafx.fxml.FXML
+    private DatePicker startDateDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {

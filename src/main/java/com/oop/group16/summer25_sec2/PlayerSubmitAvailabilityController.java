@@ -11,13 +11,13 @@ import javafx.stage.Stage;
 public class PlayerSubmitAvailabilityController
 {
     @javafx.fxml.FXML
+    private Label titleLabel;
+    @javafx.fxml.FXML
     private CheckBox unavailableCheckBox;
     @javafx.fxml.FXML
-    private DatePicker availabilityDatePicker;
+    private DatePicker selectDateDatePicker;
     @javafx.fxml.FXML
     private CheckBox availableCheckBox;
-    @javafx.fxml.FXML
-    private Label titleLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -39,6 +39,6 @@ public class PlayerSubmitAvailabilityController
     }
 
     @javafx.fxml.FXML
-    public void submitAvailabilityOnAction(ActionEvent actionEvent) {
+    public void submitOnAction(ActionEvent actionEvent) {
     }
 }

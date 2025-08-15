@@ -10,16 +10,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.group16.summer25_sec2.PlayerMessageCoachController">
    <children>
-      <Label fx:id="TitleLabel" layoutX="88.0" layoutY="30.0" prefHeight="30.0" prefWidth="193.0" text="Message Coach">
+      <Button layoutX="63.0" layoutY="324.0" mnemonicParsing="false" onAction="#sentOnAction" text="Sent" />
+      <Button layoutX="426.0" layoutY="337.0" mnemonicParsing="false" onAction="#returnOnAction" text="Return" />
+      <Label fx:id="titleLabel" layoutX="101.0" layoutY="29.0" text="Massage Coach">
          <font>
-            <Font size="20.0" />
+            <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="74.0" layoutY="88.0" text="Subject:" />
-      <Label layoutX="74.0" layoutY="139.0" text="Message:" />
-      <TextField fx:id="SubjectTextField" layoutX="145.0" layoutY="84.0" />
-      <TextArea fx:id="MessageTextField" layoutX="136.0" layoutY="128.0" prefHeight="142.0" prefWidth="394.0" />
-      <Button layoutX="74.0" layoutY="298.0" mnemonicParsing="false" onAction="#SentOnAction" text="Sent" />
-      <Button layoutX="479.0" layoutY="334.0" mnemonicParsing="false" onAction="#ReturnOnAction" text="Return" />
+      <Label layoutX="75.0" layoutY="104.0" text="Subject:" />
+      <Label layoutX="67.0" layoutY="147.0" prefHeight="35.0" prefWidth="62.0" text="Message:" />
+      <TextField fx:id="subjectTextField" layoutX="161.0" layoutY="100.0" />
+      <TextArea fx:id="messageTextField" layoutX="153.0" layoutY="137.0" prefHeight="133.0" prefWidth="366.0" />
    </children>
 </AnchorPane>
