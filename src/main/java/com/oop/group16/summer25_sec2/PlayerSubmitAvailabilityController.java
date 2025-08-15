@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class PlayerSubmitAvailabilityController
@@ -15,6 +16,8 @@ public class PlayerSubmitAvailabilityController
     private DatePicker availabilityDatePicker;
     @javafx.fxml.FXML
     private CheckBox availableCheckBox;
+    @javafx.fxml.FXML
+    private Label titleLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -3,6 +3,7 @@ package com.oop.group16.summer25_sec2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -22,6 +23,8 @@ public class PlayerViewMatchScheduleController
     private TableColumn venueColumn;
     @javafx.fxml.FXML
     private TableColumn matchTypeColumn;
+    @javafx.fxml.FXML
+    private Label titleLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

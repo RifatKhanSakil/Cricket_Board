@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.group16.summer25_sec2.PlayerSubmitAvailabilityController">
    <children>
-      <Label layoutX="117.0" layoutY="23.0" text="Submit Availability">
+      <Label fx:id="titleLabel" layoutX="117.0" layoutY="23.0" text="Submit Availability">
          <font>
             <Font size="24.0" />
          </font>

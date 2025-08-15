@@ -8,31 +8,19 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.group16.summer25_sec2.PlayerUpdateFitnessInformationController">
     <children>
-        <!-- Title -->
-        <Label layoutX="40.0" layoutY="20.0" text="Update Fitness Information">
+        <Label fx:id="titleLabel" layoutX="40.0" layoutY="20.0" text="Update Fitness Information">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
-
-        <!-- BMI -->
         <Label layoutX="40.0" layoutY="70.0" text="BMI:" />
         <TextField fx:id="bmiField" layoutX="150.0" layoutY="65.0" />
-
-        <!-- Yo-Yo Score -->
         <Label layoutX="40.0" layoutY="110.0" text="Yo-Yo Score:" />
         <TextField fx:id="yoYoScoreField" layoutX="150.0" layoutY="105.0" />
-
-        <!-- Remarks -->
         <Label layoutX="40.0" layoutY="150.0" text="Remarks:" />
         <TextField fx:id="remarksField" layoutX="150.0" layoutY="145.0" prefWidth="350.0" />
-
-        <!-- Submit Button -->
         <Button layoutX="40.0" layoutY="200.0" mnemonicParsing="false" onAction="#submitFitnessOnAction" text="Submit" />
-
-        <!-- Return Button -->
         <Button layoutX="485.0" layoutY="350.0" mnemonicParsing="false" onAction="#returnOnAction" text="Return" />
 
     </children>
 </AnchorPane>
-

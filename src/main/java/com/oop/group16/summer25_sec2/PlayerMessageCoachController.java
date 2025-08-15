@@ -10,9 +10,9 @@ import javafx.stage.Stage;
 public class PlayerMessageCoachController
 {
     @javafx.fxml.FXML
-    private TextArea messageArea;
-    @javafx.fxml.FXML
     private TextField subjectField;
+    @javafx.fxml.FXML
+    private TextArea writeMessageArea;
 
     @javafx.fxml.FXML
     public void initialize() {

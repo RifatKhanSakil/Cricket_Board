@@ -26,7 +26,7 @@ public class Player
     @javafx.fxml.FXML
     private Button teamRankingButton;
     @javafx.fxml.FXML
-    private Button leaveRequestButton;
+    private Button applyLeaveRequestButton;
 
     @javafx.fxml.FXML
     public void initialize() {

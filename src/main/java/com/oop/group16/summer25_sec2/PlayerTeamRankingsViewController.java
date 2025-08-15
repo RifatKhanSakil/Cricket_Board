@@ -32,6 +32,8 @@ public class PlayerTeamRankingsViewController
     private TableView rankingsTable;
     @javafx.fxml.FXML
     private Button returnButton;
+    @javafx.fxml.FXML
+    private Label titleLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
