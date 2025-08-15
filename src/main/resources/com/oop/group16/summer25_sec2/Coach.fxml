@@ -14,7 +14,7 @@
       </Label>
       <Button layoutX="61.0" layoutY="95.0" mnemonicParsing="false" onAction="#MonitorPlayerPerformanceOnAction" text="Monitor Player Performance" />
       <Button layoutX="61.0" layoutY="135.0" mnemonicParsing="false" onAction="#ScheduleTrainingOnAction" text="Schedule Training" />
-      <Button layoutX="61.0" layoutY="174.0" mnemonicParsing="false" onAction="#ReviewPlayerReportsOnAction" text="Review Player Reports" />
+      <Button layoutX="61.0" layoutY="174.0" mnemonicParsing="false" onAction="#viewPlayerReportsOnAction" text="View Player Reports" />
       <Button layoutX="56.0" layoutY="216.0" mnemonicParsing="false" onAction="#SendFeedbackToPlayersOnAction" text="Send Feedback to Players" />
       <Button layoutX="59.0" layoutY="256.0" mnemonicParsing="false" onAction="#MessageTeamManagerOnAction" text="Message Team Manager" />
       <Button layoutX="473.0" layoutY="310.0" mnemonicParsing="false" onAction="#LogOutOnAction" text="Log Out" />

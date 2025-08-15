@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="your.package.CoachViewPlayerReportsController">
+
+    <!-- Title Label -->
+    <Label fx:id="titleLabel" text="Player Performance Reports" layoutX="20" layoutY="20" />
+
+    <!-- Player Name Selection -->
+    <Label text="Select Player:" layoutX="20" layoutY="60" />
+    <ComboBox fx:id="playerNameComboBox" layoutX="150" layoutY="55" prefWidth="200" />
+
+    <!-- Match Type Selection -->
+    <Label text="Match Type:" layoutX="20" layoutY="100" />
+    <ComboBox fx:id="matchTypeComboBox" layoutX="150" layoutY="95" prefWidth="200" />
+
+    <!-- Load Report Button -->
+    <Button fx:id="loadReportButton" text="Load Report" layoutX="20" layoutY="140"
+            onAction="#handleLoadReport" />
+
+    <!-- Table for Stats -->
+    <TableView fx:id="reportTable" layoutX="20" layoutY="180" prefWidth="500" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="statTypeColumn" text="Stat Type" prefWidth="150" />
+            <TableColumn fx:id="valueColumn" text="Value" prefWidth="150" />
+            <TableColumn fx:id="additionalInfoColumn" text="Additional Info" prefWidth="200" />
+        </columns>
+    </TableView>
+
+    <!-- Return Home Button -->
+    <Button fx:id="returnHomeButton" text="Return Home" layoutX="20" layoutY="450"
+            onAction="#handleReturnHome" />
+
+</AnchorPane>
