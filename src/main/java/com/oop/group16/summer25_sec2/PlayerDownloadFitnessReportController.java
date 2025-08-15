@@ -3,6 +3,7 @@ package com.oop.group16.summer25_sec2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -30,7 +31,7 @@ public class PlayerDownloadFitnessReportController
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Player.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();

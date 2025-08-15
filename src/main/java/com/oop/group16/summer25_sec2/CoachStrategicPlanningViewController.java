@@ -2,6 +2,7 @@ package com.oop.group16.summer25_sec2;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -25,7 +26,7 @@ public class CoachStrategicPlanningViewController
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Coach.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();

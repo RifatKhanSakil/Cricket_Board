@@ -1,6 +1,7 @@
 package com.oop.group16.summer25_sec2;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -37,7 +38,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
@@ -52,7 +53,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerViewMatchSchedule.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
@@ -67,7 +68,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerDownloadFitnessReport.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
@@ -82,7 +83,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerMessageCoach.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
@@ -97,7 +98,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerSubmitAvailability.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
@@ -113,7 +114,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerViewPerformanceStats.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
@@ -128,7 +129,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerUpdateFitnessInformation.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
@@ -143,7 +144,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerTeamRankingsView.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
@@ -158,7 +159,7 @@ public class Player
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PlayerRequestLeave.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage=new Stage();
+            Stage stage= (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
