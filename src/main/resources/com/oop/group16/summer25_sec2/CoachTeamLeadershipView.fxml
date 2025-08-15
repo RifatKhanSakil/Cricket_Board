@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.group16.summer25_sec2.CoachTeamLeadershipViewController">
+   <children>
+      <Label fx:id="titleLabel" layoutX="160.0" layoutY="21.0" text="Team Leadership Assignment">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="94.0" text="Select Captain:" />
+      <Label layoutX="69.0" layoutY="150.0" text="Select Vice-Captain:" />
+      <Label fx:id="confirmationLabel" layoutX="188.0" layoutY="258.0" prefHeight="18.0" prefWidth="249.0" />
+      <ChoiceBox fx:id="selectCaptainChoiceBox" layoutX="188.0" layoutY="90.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="selectViceCaptainChoiceBox" layoutX="188.0" layoutY="146.0" prefWidth="150.0" />
+      <Button layoutX="188.0" layoutY="187.0" mnemonicParsing="false" onAction="#updateRoleOnAction" text="Update Role" />
+   </children>
+</AnchorPane>

@@ -116,13 +116,47 @@ public class Coach
 
     @javafx.fxml.FXML
     public void TeamLeadershipOnAction(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CoachTeamLeadershipView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
     }
 
     @javafx.fxml.FXML
     public void SeasonStatsOnAction(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CoachSeasonStatsView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
     }
 
     @javafx.fxml.FXML
     public void TeamSelectionOnAction(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CoachTeamSelectionView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage=new Stage();
+            stage.setTitle("Hello!");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e) {
+            System.out.println(" ");
+        }
+
     }
 }

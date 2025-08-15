@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.group16.summer25_sec2.CoachSeasonStatsViewController">
+   <children>
+      <Label fx:id="titleLabel" layoutX="206.0" layoutY="14.0" text="Season Statistics">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="314.0" text="Save Report as:" />
+      <Button layoutX="74.0" layoutY="62.0" mnemonicParsing="false" onAction="#loadDataButton" text="LoadData" />
+      <TableView fx:id="tableTableView" layoutX="74.0" layoutY="100.0" prefHeight="200.0" prefWidth="461.0">
+        <columns>
+          <TableColumn fx:id="metricTableColumn" prefWidth="132.0" text="Metric" />
+          <TableColumn fx:id="valueTableColumn" prefWidth="131.20001220703125" text="Value" />
+            <TableColumn fx:id="additionalInformationTableColumn" prefWidth="198.39996337890625" text="Additional Information" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="saveReportChoiceBox" layoutX="166.0" layoutY="310.0" prefWidth="150.0" />
+      <Button layoutX="350.0" layoutY="310.0" mnemonicParsing="false" onAction="#saveReportOnAction" text="Save Report" />
+   </children>
+</AnchorPane>
