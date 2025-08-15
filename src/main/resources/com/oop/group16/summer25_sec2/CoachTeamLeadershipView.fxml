@@ -20,5 +20,6 @@
       <ChoiceBox fx:id="selectCaptainChoiceBox" layoutX="188.0" layoutY="90.0" prefWidth="150.0" />
       <ChoiceBox fx:id="selectViceCaptainChoiceBox" layoutX="188.0" layoutY="146.0" prefWidth="150.0" />
       <Button layoutX="188.0" layoutY="187.0" mnemonicParsing="false" onAction="#updateRoleOnAction" text="Update Role" />
+      <Button layoutX="426.0" layoutY="312.0" mnemonicParsing="false" onAction="#returnOnAction" text="Return" />
    </children>
 </AnchorPane>

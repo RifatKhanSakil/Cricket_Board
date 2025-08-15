@@ -16,7 +16,7 @@
          </font>
       </Label>
       <Label layoutX="24.0" layoutY="56.0" text="Available Players:" />
-      <Label layoutX="30.0" layoutY="305.0" text="Selected Team:" />
+      <Label fx:id="SelectedTeamLabel" layoutX="30.0" layoutY="305.0" text="Selected Team:" />
       <ListView fx:id="availablePlayersListView" layoutX="130.0" layoutY="49.0" prefHeight="200.0" prefWidth="379.0" />
       <TextArea fx:id="selectTeamTextArea" layoutX="130.0" layoutY="294.0" prefHeight="102.0" prefWidth="379.0" />
       <Button layoutX="130.0" layoutY="256.0" mnemonicParsing="false" onAction="#confirmTeamOnAction" text="Confirm Team" />

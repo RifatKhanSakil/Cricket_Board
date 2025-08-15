@@ -16,6 +16,8 @@ public class CoachTeamSelectionViewController
     private Label titleLabel;
     @javafx.fxml.FXML
     private TextArea selectTeamTextArea;
+    @javafx.fxml.FXML
+    private Label SelectedTeamLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

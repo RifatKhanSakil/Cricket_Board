@@ -27,5 +27,6 @@
       </TableView>
       <ChoiceBox fx:id="saveReportChoiceBox" layoutX="166.0" layoutY="310.0" prefWidth="150.0" />
       <Button layoutX="350.0" layoutY="310.0" mnemonicParsing="false" onAction="#saveReportOnAction" text="Save Report" />
+      <Button layoutX="490.0" layoutY="348.0" mnemonicParsing="false" onAction="#returnOnAction" text="Return" />
    </children>
 </AnchorPane>
