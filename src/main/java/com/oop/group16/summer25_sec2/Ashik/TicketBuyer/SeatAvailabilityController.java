@@ -87,8 +87,13 @@ public class SeatAvailabilityController implements Initializable {
         if (sel != null) {
             if (!"Available".equalsIgnoreCase(sel.getAvailability())) {
                 sel.setAvailability("Waitlist");
-                applyFilters();
+            } else {
+                // If it was available, keep it but mark as waitlisted
+                sel.setAvailability("Waitlist");
             }
+            // Ensure the updated row remains visible by switching to "All Seats"
+            allSeatsRadio.setSelected(true);
+            applyFilters();
         }
     }
 
@@ -102,6 +107,30 @@ public class SeatAvailabilityController implements Initializable {
     private void refreshData() {
         allSeats.clear();
         seatsTable.getItems().clear();
+
+        String selectedMatch = matchComboBox.getValue();
+        if (selectedMatch == null && !availableMatches.isEmpty()) {
+            selectedMatch = availableMatches.get(0);
+            matchComboBox.getSelectionModel().select(0);
+        }
+
+        LocalDate selectedDate = datePicker.getValue();
+        if (selectedDate == null) {
+            selectedDate = LocalDate.now();
+            datePicker.setValue(selectedDate);
+        }
+
+        // Populate mock data based on selected match and date so the table is not empty
+        // In a real app, replace this with a service/database call
+        String block = selectedMatch == null ? "Block" : selectedMatch.split(" ")[0];
+        for (int i = 1; i <= 10; i++) {
+            String seatNo = "A" + i;
+            String blockRow = block + "/R" + ((i - 1) / 5 + 1);
+            double price = 50 + i * 5;
+            String availability = (i % 3 == 0) ? "Booked" : "Available";
+            allSeats.add(new SeatAvailabilityItem(seatNo, blockRow, price, availability));
+        }
+
         applyFilters();
     }
 
