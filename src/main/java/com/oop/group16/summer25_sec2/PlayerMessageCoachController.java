@@ -3,6 +3,7 @@ package com.oop.group16.summer25_sec2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -13,6 +14,8 @@ public class PlayerMessageCoachController
     private TextField subjectField;
     @javafx.fxml.FXML
     private TextArea writeMessageArea;
+    @javafx.fxml.FXML
+    private Label TitleLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
