@@ -11,18 +11,18 @@ import javafx.stage.Stage;
 public class PlayerMessageCoachController
 {
     @javafx.fxml.FXML
-    private TextField subjectField;
-    @javafx.fxml.FXML
-    private TextArea writeMessageArea;
-    @javafx.fxml.FXML
     private Label TitleLabel;
+    @javafx.fxml.FXML
+    private TextArea MessageTextField;
+    @javafx.fxml.FXML
+    private TextField SubjectTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void returnOnAction(ActionEvent actionEvent) {
+    public void ReturnOnAction(ActionEvent actionEvent) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Player.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
@@ -37,6 +37,6 @@ public class PlayerMessageCoachController
     }
 
     @javafx.fxml.FXML
-    public void sendMessageOnAction(ActionEvent actionEvent) {
+    public void SentOnAction(ActionEvent actionEvent) {
     }
 }
