@@ -13,13 +13,13 @@ public class PlayerDownloadFitnessReportController
     @javafx.fxml.FXML
     private TableColumn bmiColumn;
     @javafx.fxml.FXML
-    private TableColumn reportDateColumn;
-    @javafx.fxml.FXML
     private TableColumn heartRateColumn;
     @javafx.fxml.FXML
     private TableView fitnessReportTable;
     @javafx.fxml.FXML
     private TableColumn staminaColumn;
+    @FXML
+    private TableColumn dateColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

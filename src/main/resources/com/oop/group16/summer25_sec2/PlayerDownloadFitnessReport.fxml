@@ -9,29 +9,24 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.group16.summer25_sec2.PlayerDownloadFitnessReportController">
     <children>
-        <!-- Title -->
         <Label layoutX="40.0" layoutY="20.0" text="Fitness Reports">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
 
-        <!-- Table for Fitness Reports -->
         <TableView fx:id="fitnessReportTable" layoutX="40.0" layoutY="60.0" prefHeight="250.0" prefWidth="520.0">
             <columns>
-                <TableColumn fx:id="reportDateColumn" text="Date" prefWidth="120.0"/>
-                <TableColumn fx:id="bmiColumn" text="BMI" prefWidth="100.0"/>
-                <TableColumn fx:id="heartRateColumn" text="Heart Rate" prefWidth="120.0"/>
-                <TableColumn fx:id="staminaColumn" text="Stamina Level" prefWidth="180.0"/>
+                <TableColumn fx:id="dateColumn" prefWidth="120.0" text="Date" />
+                <TableColumn fx:id="bmiColumn" prefWidth="100.0" text="BMI" />
+                <TableColumn fx:id="heartRateColumn" prefWidth="120.0" text="Heart Rate" />
+                <TableColumn fx:id="staminaColumn" prefWidth="180.0" text="Stamina Level" />
             </columns>
         </TableView>
 
-        <!-- Download Button -->
         <Button layoutX="40.0" layoutY="320.0" mnemonicParsing="false" onAction="#downloadReportOnAction" text="Download Report" />
 
-        <!-- Return Button -->
         <Button layoutX="485.0" layoutY="350.0" mnemonicParsing="false" onAction="#returnOnAction" text="Return" />
 
     </children>
 </AnchorPane>
-
